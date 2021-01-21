@@ -9,6 +9,7 @@ $state = $_GET['state'];
 $imgsource = "img/states/{$state}";
 
 echo "
+<img class='stateflag' src=$imgsource alt='state image'>
 <div class ='state-header'>
     <h1>The State of  " . $state . " </h1>
     <img class='stateflag' src=$imgsource alt='state image'>
