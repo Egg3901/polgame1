@@ -1,12 +1,9 @@
 <?php
-
-
+include 'connect.php';
 if (!isset($_SESSION['loggedin'])) {
     header('Location: index.html');
     exit;
 }
-
-include 'connect.php';
 $con = OpenCon(); // opens a connection to the database, this function is from the above included script
 $stmt = $con->prepare('SELECT polstate, polname FROM accounts WHERE id = ?');
 $stmt->bind_param('i', $_SESSION['id']);

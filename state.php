@@ -2,6 +2,7 @@
 
 <?php
 include 'navigation.php';
+
 error_reporting(E_ALL);
 ini_set('display_errors', 'on');
 $state = $_GET['state'];
