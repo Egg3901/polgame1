@@ -40,5 +40,4 @@ foreach ($result as $row) {
 }
 print "</table>";
 
-CloseCon($con);
 ?>
