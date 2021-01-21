@@ -144,4 +144,4 @@ $stmt->close();
 </body>
 </html>
 <?php
-CloseCon($conn);
+CloseCon($con);

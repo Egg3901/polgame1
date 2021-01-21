@@ -1,7 +1,9 @@
 
 
 <?php include 'navigation.php';
-
+session_start();
+error_reporting(E_ALL);
+ini_set('display_errors', 'on');
 $state = $_GET['state'];
 include 'connect.php';
 $con = OpenCon();
@@ -38,5 +40,5 @@ foreach ($result as $row) {
 }
 print "</table>";
 
-CloseCon($conn);
+CloseCon($con);
 ?>
