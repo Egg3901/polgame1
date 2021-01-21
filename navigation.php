@@ -1,20 +1,14 @@
 <?php
-session_start();
-error_reporting(E_ALL);
-ini_set('display_errors', 'on');
+
 
 if (!isset($_SESSION['loggedin'])) {
     header('Location: index.html');
     exit;
 }
-?>
 
-<?php
 include 'connect.php';
 $con = OpenCon(); // opens a connection to the database, this function is from the above included script
-
 $stmt = $con->prepare('SELECT polstate, polname FROM accounts WHERE id = ?');
-// In this case we can use the account ID to get the account info.
 $stmt->bind_param('i', $_SESSION['id']);
 $stmt->execute();
 $stmt->bind_result($polstate, $polname);

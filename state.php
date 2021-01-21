@@ -5,15 +5,12 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 'on');
 $state = $_GET['state'];
-
+$imgsource = ""img/state/$state"";
 
 echo "<div class ='state-header'>
 <h1>The State of  " . $state . " </h1>
 
-<img src="upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Flag_of_Massachusetts.svg/2560px-Flag_of_Massachusetts.svg.png">
-<tr>
-
-
+<img src=$imgsource>
 
 </tr>";
 
