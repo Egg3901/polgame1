@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="register">
+    <h1>A House Divided -Register</h1>
+    <form action="register.php" method="post" autocomplete="off">
+        <label for="username">
+            <i class="fas fa-user"></i>
+        </label>
+        <input type="text" name="username" placeholder="Username" id="username" required>
+
+        <label for="password">
+            <i class="fas fa-lock"></i>
+        </label>
+        <input type="password" name="password" placeholder="Password" id="password" required>
+        <label for="polname">
+            <i class="fas fa-vote-yea"></i>
+        </label>
+        <input name="polname" placeholder="Enter name!" required>
+        <label for="email">
+            <i class="fas fa-envelope"></i>
+        </label>
+        <input type="email" name="email" placeholder="Email" id="email" required>
+
+
+
+        <label for="state">
+            <i class="fas fa-flag-usa"></i>
+        </label>
+        <select name="state" placeholder="Massachusetts" id="state" required>
+
+            <option value="Massachusetts">Massachusetts</option>
+            <option value="New Hampshire">New Hampshire</option>
+        </select>
+
+
+
+        <label for="social">
+            <i class="fas fa-balance-scale"></i>
+
+        </label>
+
+        <select name="social" placeholder="Social Views" id="social" required>
+
+            <option value="0" selected="selected">Centrist</option>
+            <option value="-1">Liberal</option>
+        </select>
+        <label for="economic">
+            <i class="fas fa-money-bill-wave"></i>
+
+        </label>
+
+        <select name="economic" id="economic" required>
+            <option value="5">Libertarian Right</option>
+            <option value="4">Right Wing</option>
+            <option value="3">Leans Right Wing</option>
+            <option value="1">Center Right</option>
+            <option value="0" selected="selected">Centrist</option>
+            <option value="-1">Center Left</option>
+            <option value="-3">Leans Left Wing</option>
+            <option value="-4">Left Wing</option>
+            <option value="-5">Very Left Wing</option>
+        </select>
+
+        <input type="submit" value="Register">
+
+    </form>
+</div>
+</body>
+</html>
