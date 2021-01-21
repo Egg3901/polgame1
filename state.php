@@ -9,19 +9,22 @@ $state = $_GET['state'];
 $imgsource = "img/states/{$state}";
 
 echo "
-
-<div class ='state-header'>
+<br>
+<div class ='center'>
     <h1>The State of  " . $state . " </h1>
     <img class='stateflag' src=$imgsource alt='state image'>
 </div>"
 ;
 
 echo "
+    <br>
+    <div class='center'>
     <table border='1'>
         <th>Influence</th>
         <th> Politician Name</th>
         <th>Social Position</th>
         <th> Economic Position</th>
+    
 ";
 
 
@@ -38,5 +41,5 @@ foreach ($result as $row) {
     print " </tr> ";
 }
 print "</table>";
-
+print "</div>";
 ?>
