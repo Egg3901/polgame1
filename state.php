@@ -5,12 +5,12 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 'on');
 $state = $_GET['state'];
-$imgsource = ""img/state/$state"";
+$imgsource = ""img/states/$state"";
 
 echo "<div class ='state-header'>
 <h1>The State of  " . $state . " </h1>
 
-<img src=$imgsource>
+<img src=$imgsource alt='state image'>
 
 </tr>";
 
