@@ -28,6 +28,7 @@ $stmt->close();
         <h1>A House Divided (WIP)</h1>
         <a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
         <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
+        <a href="state.php?state=<?=$polstate?>"><i class="fas fa-flag-usa"></i><?=$polstate?></a>
     </div>
 </nav>
 <div class="content">
@@ -42,7 +43,7 @@ $stmt->close();
             </tr>
             <tr>
                 <td>Location:</td>
-                <td><?=$polstate?></td>
+                <td><a href="state.php?state=<?=$polstate?>"><?=$polstate?></a></td>
             </tr>
             <tr>
                 <td>Social Position:</td>

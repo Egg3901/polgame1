@@ -11,6 +11,8 @@ if (!isset($_SESSION['loggedin'])) {
 
 <?php
 include 'connect.php';
+$con = OpenCon(); // opens a connection to the database, this function is from the above included script
+
 $stmt = $con->prepare('SELECT polstate, polname FROM accounts WHERE id = ?');
 // In this case we can use the account ID to get the account info.
 $stmt->bind_param('i', $_SESSION['id']);
