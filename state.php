@@ -25,7 +25,7 @@ echo "
 
 
 $uquery = 'SELECT influence, polname, social, economic FROM accounts WHERE polstate = ?';
-$stmt = $conn->prepare($uquery);
+$stmt = $con->prepare($uquery);
 $stmt->bind_param("s", $state);
 $stmt->execute();
 $result = $stmt->get_result();
