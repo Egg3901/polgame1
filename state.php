@@ -5,8 +5,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 'on');
 $state = $_GET['state'];
-include 'connect.php';
-$con = OpenCon();
+
 
 echo "
 <div class ='state-header'>
