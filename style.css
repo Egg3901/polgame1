@@ -238,7 +238,12 @@ body {
     border-style: solid;
     border-color: #555 transparent transparent transparent;
 }
-
+img[class="stteflag"] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
 /* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
     visibility: visible;
