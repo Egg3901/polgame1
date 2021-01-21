@@ -43,7 +43,7 @@ $stmt->close();
             </tr>
             <tr>
                 <td>Actions:</td>
-                <td><?=$ap?>%</td>
+                <td><?=$ap?> actions remaining</td>
             </tr>
             <tr>
                 <td>Funding:</td>

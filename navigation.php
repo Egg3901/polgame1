@@ -4,7 +4,6 @@ error_reporting(E_ALL);
 ini_set('display_errors', 'on');
 $stategiven = $_GET['state'];
 $thisPage=$stategiven;
-session_start();
 if (!isset($_SESSION['loggedin'])) {
     header('Location: index.html');
     exit;
