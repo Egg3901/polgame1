@@ -47,7 +47,7 @@ $stmt->close();
             </tr>
             <tr>
                 <td>Funding:</td>
-                <td><?=$funds?>%</td>
+                <td><?=$funds?>$</td>
             </tr>
             <tr>
                 <td>Location:</td>
