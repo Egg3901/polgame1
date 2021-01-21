@@ -1,4 +1,8 @@
 <?php
+
+
+error_reporting(E_ALL);
+ini_set('display_errors', 'on');
 include 'connect.php';
 $con = OpenCon();
 if ( !isset($_POST['username'], $_POST['password']) ) {
