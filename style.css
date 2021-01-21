@@ -238,7 +238,7 @@ body {
     border-style: solid;
     border-color: #555 transparent transparent transparent;
 }
-img.stateflag {
+.stateflag img {
     display: block;
     margin-left: auto;
     margin-right: auto;
