@@ -7,10 +7,10 @@ if (!isset($_SESSION['loggedin'])) {
 }
 include 'connect.php';
 $con = OpenCon(); // opens a connection to the database, this function is from the above included script
-$stmt = $con->prepare('SELECT password, email, influence, polstate, polname, imgurl, social, economic FROM accounts WHERE id = ?');
+$stmt = $con->prepare('SELECT password, email, influence, polstate, polname, imgurl, social, economic, action, funding FROM accounts WHERE id = ?');
 $stmt->bind_param('i', $_SESSION['id']); // gets the id var from the current session, binds it to the
 $stmt->execute();
-$stmt->bind_result($password, $email, $influence, $polstate, $polname, $imgurl, $social, $economic);
+$stmt->bind_result($password, $email, $influence, $polstate, $polname, $imgurl, $social, $economic, $ap, $funds);
 $stmt->fetch();
 $stmt->close();
 ?>
@@ -40,6 +40,14 @@ $stmt->close();
             <tr>
                 <td>Recognition:</td>
                 <td><?=$influence?>%</td>
+            </tr>
+            <tr>
+                <td>Actions:</td>
+                <td><?=$ap?>%</td>
+            </tr>
+            <tr>
+                <td>Funding:</td>
+                <td><?=$funds?>%</td>
             </tr>
             <tr>
                 <td>Location:</td>
