@@ -8,6 +8,10 @@
 body {
     background-color: #acbed7;
 }
+.stateheader h1 {
+    text-align: center;
+    font-size: large;
+}
 .login {
     width: 400px;
     background-color: #612cc3;
