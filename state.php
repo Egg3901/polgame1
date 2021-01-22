@@ -22,7 +22,7 @@ echo "
     
     <br>
     <div class='center'>
-    <table border='1'>
+    <table border='.5' style='margin:auto;'>
         <th>Influence</th>
         <th> Politician Name</th>
         <th>Social Position</th>
