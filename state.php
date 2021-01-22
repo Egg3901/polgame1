@@ -44,9 +44,11 @@ foreach ($result as $row) {
     foreach ($row as $polname=>$data){
         if ($iter = 0) {  //influence
             print " <td> $data % </Td>";
+            $iter = $iter +1;
         }
         else if ($iter = 1) {  //name
             print " <td> $data </td> ";
+            $iter = $iter +1;
         }
         else if ($iter = 2) { // social position data on state page
             $social = $data;
@@ -78,6 +80,7 @@ foreach ($result as $row) {
                 $formattedsocial = "Libertarian Left";
             }
             print " <td> $formattedsocial </td> ";
+            $iter = $iter +1;
         }
         else if ($iter = 3){
             $economic = $data;
@@ -109,9 +112,10 @@ foreach ($result as $row) {
                 $formattedeconomic = "Very Left Wing";
             }
             print " <td> $formattedsocial </td> ";
+            $iter = $iter +1;
 
         }
-        $iter = $iter +1;
+
     }
     print " </tr> ";
 }
