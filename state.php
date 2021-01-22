@@ -154,7 +154,7 @@ echo "
             <th>Gubernatorial Election</th>
          </tr>
          <tr>
-            <table border='.5' style='margin: auto;'>
+            <table border='.5' >
                 <tr>
                     <td> Candidates</td>
                 </tr>
