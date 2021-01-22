@@ -9,15 +9,17 @@ $state = $_GET['state'];
 $imgsource = "img/states/{$state}";
 
 echo "
+
 <br>
 <div>
-    <h1 class='stateheader'>The State of   " . $state . "   </h1>
+    <h1 style='text-align: center; font-size: large;'>The State of   " . $state . "   </h1>
     <br>
     <img class='stateflag' src=$imgsource alt='state image'>
 </div>"
 ;
 
 echo "
+    
     <br>
     <div class='center'>
     <table border='1'>
