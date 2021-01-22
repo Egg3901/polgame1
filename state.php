@@ -109,7 +109,9 @@ foreach ($result as $row) {
                 $formattedeconomic = "Very Left Wing";
             }
             print " <td> $formattedsocial </td> ";
+
         }
+        $iter = $iter +1;
     }
     print " </tr> ";
 }
