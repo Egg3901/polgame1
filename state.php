@@ -10,7 +10,7 @@ $imgsource = "img/states/{$state}";
 
 echo "
 <br>
-<div class ='center'>
+<div>
     <h1 class='stateheader'>The State of   " . $state . "   </h1>
     <br>
     <img class='stateflag' src=$imgsource alt='state image'>

@@ -8,6 +8,10 @@
 body {
     background-color: #acbed7;
 }
+.stateheader div {
+    width:800px;
+    margin: 0 auto;
+}
 .stateheader div h1 {
     text-align: center;
     font-size: large;
