@@ -45,10 +45,10 @@ foreach ($result as $row) {
         if ($iter = 0) {  //influence
             print " <td> $data % </Td>";
         }
-        if ($iter = 1) {  //name
+        else if ($iter = 1) {  //name
             print " <td> $data </td> ";
         }
-        if ($iter = 2) { // social position data on state page
+        else if ($iter = 2) { // social position data on state page
             $social = $data;
             if ($social <= 5){
                 $formattedsocial = "Very Right Wing";
@@ -79,7 +79,7 @@ foreach ($result as $row) {
             }
             print " <td> $formattedsocial </td> ";
         }
-        if ($iter = 3){
+        else if ($iter = 3){
             $economic = $data;
             if ($economic <= 5){
                 $formattedeconomic = "Libertarian Right";
