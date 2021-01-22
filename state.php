@@ -108,6 +108,7 @@ foreach ($result as $row) {
             if ($economic <= -5){
                 $formattedeconomic = "Very Left Wing";
             }
+            print " <td> $formattedsocial </td> ";
         }
     }
     print " </tr> ";
