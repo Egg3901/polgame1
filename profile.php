@@ -13,23 +13,8 @@ $stmt->bind_result($password, $email, $influence, $polstate, $polname, $imgurl, 
 $stmt->fetch();
 $stmt->close();
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>AHD - <?=$polname?></title>
-    <link href="style.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
-</head>
-<body class="loggedin">
-<nav class="navtop">
-    <div>
-        <h1>A House Divided (WIP)</h1>
-        <a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
-        <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
-        <a href="state.php?state=<?=$polstate?>"><i class="fas fa-flag-usa"></i><?=$polstate?></a>
-    </div>
-</nav>
+
+
 <div class="content">
     <h2><?=$polname?></h2>
     <div>
