@@ -5,9 +5,9 @@ include 'navigation.php';
 
 error_reporting(E_ALL);
 ini_set('display_errors', 'on');
-$state =urlencode( $_GET['state']);
-
-$imgsource = "img/states/{$state}";
+$statef =urlencode( $_GET['state']);
+$state = str_replace('+', ' ', $statef);
+$imgsource = "img/states/{$statef}";
 
 echo "
 <div>
