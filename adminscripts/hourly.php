@@ -10,7 +10,7 @@ $stmt->execute();
 $stmt->fetch();
 $stmt->close();
 $con = OpenCon();
-$uquery = 'UPDATE accounts SET actions = actions + 5';
+$uquery = 'UPDATE accounts SET action = action + 5';
 $stmt = $con->prepare($uquery);
 $stmt->execute();
 $stmt->fetch();
