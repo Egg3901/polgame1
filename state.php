@@ -37,6 +37,8 @@ echo "
                         <tr> <td style='text-align: center;'>Junior Senator</td></tr>
                         <tr> <td style='text-align: center;'>None</td> </tr>
                 </table>
+            </td>
+            <td>
                 <table>
                         <tr> <td style='text-align: center;'>Senior Senator</td></tr>
                         <tr> <td style='text-align: center;'>None</td> </tr>
