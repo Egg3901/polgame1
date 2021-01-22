@@ -8,7 +8,7 @@
 body {
     background-color: #acbed7;
 }
-.stateheader h1 {
+.stateheader div h1 {
     text-align: center;
     font-size: large;
 }
