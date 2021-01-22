@@ -151,10 +151,10 @@ echo "
 <td>
      <table border='.5' style='margin: auto;'>
          <tr>
-            <td>Gubernatorial Election</td>
+            <th>Gubernatorial Election</th>
          </tr>
          <tr>
-            <table>
+            <table border='.5' style='margin: auto;'>
                 <tr>
                     <td> Candidates</td>
                 </tr>
