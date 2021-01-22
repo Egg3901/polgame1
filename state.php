@@ -28,18 +28,18 @@ echo "
         <tr>
             <td>
                 <table>
-                        <tr> Governor </tr>
-                        <tr> None </tr>
+                        <tr> <td style='text-align: center;'>Governor</td></tr>
+                        <tr> <td style='text-align: center;'>None</td> </tr>
                 </table>
             </td>
             <td>
                 <table>
-                        <tr> <td>Junior Senator</td></tr>
-                        <tr> <td>None</td> </tr>
+                        <tr> <td style='text-align: center;'>Junior Senator</td></tr>
+                        <tr> <td style='text-align: center;'>None</td> </tr>
                 </table>
                 <table>
-                        <tr> <td>Senior Senator</td></tr>
-                        <tr> <td>None</td> </tr>
+                        <tr> <td style='text-align: center;'>Senior Senator</td></tr>
+                        <tr> <td style='text-align: center;'>None</td> </tr>
                 </table>
             </td>
         </tr>
