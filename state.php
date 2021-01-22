@@ -17,12 +17,33 @@ echo "
     <br>
     <img style='width: 30%; height: auto; border: 2px solid black; display: block; margin: auto;' src=$imgsource alt='state image'>
 </div>"
+
 ;
 
 echo "
     
     <br>
-    <div class='center'>
+    <div style='margin: auto;'>
+    <table style='margin:auto;'>
+        <tr>
+            <td>
+                <table>
+                        <tr> Governor </tr>
+                        <tr> None </tr>
+                </table>
+            </td>
+            <td>
+                <table>
+                        <tr> Junior Senator </tr>
+                        <tr> None </tr>
+                </table>
+                <table>
+                        <tr> Senior Senator </tr>
+                        <tr> None </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
     <table border='.5' style='margin:auto;'>
         <th>Influence</th>
         <th> Politician Name</th>
