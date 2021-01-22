@@ -34,12 +34,12 @@ echo "
             </td>
             <td>
                 <table>
-                        <tr> Junior Senator </tr>
-                        <tr> None </tr>
+                        <tr> <td>Junior Senator</td></tr>
+                        <tr> <td>None</td> </tr>
                 </table>
                 <table>
-                        <tr> Senior Senator </tr>
-                        <tr> None </tr>
+                        <tr> <td>Senior Senator</td></tr>
+                        <tr> <td>None</td> </tr>
                 </table>
             </td>
         </tr>
