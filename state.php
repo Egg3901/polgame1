@@ -9,7 +9,7 @@ $state = $_GET['state'];
 $imgsource = "img/states/{$state}";
 
 echo "
-
+<div>
 <br>
 <div>
     <h1 style='text-align: center; font-size: 40px;'>The State of   " . $state . "   </h1>
@@ -44,5 +44,6 @@ foreach ($result as $row) {
     print " </tr> ";
 }
 print "</table>";
+print "</div>";
 print "</div>";
 ?>

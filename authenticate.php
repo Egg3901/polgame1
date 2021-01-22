@@ -3,7 +3,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 'on');
 include 'adminscripts/connect.php';
-
+session_start();
 $con = OpenCon();
 
 if ( !isset($_POST['username'], $_POST['password']) ) {
