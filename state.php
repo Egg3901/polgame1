@@ -12,7 +12,7 @@ echo "
 
 <br>
 <div>
-    <h1 style='text-align: center; font-size: large;'>The State of   " . $state . "   </h1>
+    <h1 style='text-align: center; font-size: 40px;'>The State of   " . $state . "   </h1>
     <br>
     <img class='stateflag' src=$imgsource alt='state image'>
 </div>"
