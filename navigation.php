@@ -1,6 +1,5 @@
 <?php
-define("ABS_PATH", $_SERVER['DOCUMENT_ROOT']);
-include("ABS_PATH","adminscripts/connect.php");
+include 'adminscripts/connect.php';
 if (!isset($_SESSION['loggedin'])) {
     header('Location: index.html');
     exit;
