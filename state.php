@@ -46,6 +46,9 @@ echo "
             </td>
         </tr>
     </table>
+<table>
+<tr>
+<td>
     <table border='.5' style='margin:auto;'>
         <th>Influence</th>
         <th> Politician Name</th>
@@ -142,6 +145,27 @@ foreach ($result as $row) {
     }
     print " </tr> ";
 }
+print "</table>";
+echo "
+</td>
+<td>
+     <table>
+         <tr>
+            <td>Gubernatorial Election</td>
+         </tr>
+         <tr>
+            <table>
+                <tr>
+                    <td> Candidates</td>
+                </tr>
+                <tr>
+                    <td> None </td>
+                </tr>
+            </table>            
+        </tr>
+    </table>
+</td>
+";
 print "</table>";
 print "</div>";
 print "</div>";
