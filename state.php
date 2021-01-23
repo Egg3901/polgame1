@@ -151,7 +151,7 @@ echo "
 <td>
      <table border='.5' style='margin: auto; width: 9%;'>
          <tr>
-            <th>Gubernatorial Election</th>
+            <th style='width: 9%'>>Gubernatorial Election</th>
          </tr>
          <tr>
             <table border='.5' style='margin: auto; width: 9%;'>
@@ -159,7 +159,7 @@ echo "
                     <td style='width: 9%'> Candidates</td>
                 </tr>
                 <tr>
-                    <td style='width: 9%'>
+                    <td style='width: 9%'> None </td>
                 </tr>
             </table>            
         </tr>
