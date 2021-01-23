@@ -8,6 +8,11 @@
 body {
     background-color: #acbed7;
 }
+.scale
+{
+    height: 1em;
+    width: 1em;
+}
 .stateheader div {
     width:800px;
     margin: 0 auto;
