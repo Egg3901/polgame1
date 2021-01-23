@@ -58,7 +58,7 @@ echo "
 ";
 
 
-$uquery = 'SELECT influence, polname, social, economic FROM accounts WHERE polstate = ? ORDER BY influence';
+$uquery = 'SELECT influence, polname, social, economic FROM accounts WHERE polstate = ? ORDER BY influence DESC';
 $stmt = $con->prepare($uquery);
 $stmt->bind_param("s", $state);
 $stmt->execute();
