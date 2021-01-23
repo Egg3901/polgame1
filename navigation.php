@@ -25,7 +25,8 @@ $stmt->close();
     <div>
         <h1>A House Divided (WIP)</h1>
         <a href="profile.php"><i class="fas fa-user-circle"></i><?php echo $polname ?></a>
-        <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
+        <a href="campaignoffice.php"><i class="fas fa-briefcase"></i> Campaign Office</a>
         <a href="state.php?state=<?=$polstate?>"><i class="fas fa-flag-usa"></i><?=$polstate?></a>
+        <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
     </div>
 </nav>
