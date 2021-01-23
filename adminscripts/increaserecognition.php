@@ -11,7 +11,7 @@ $det->execute();
 $det->bind_result($action);
 
 if ($action < 5) {
-    header('Location: campaignoffice.php');
+    header('Location: ../campaignoffice.php');
 }
 if ($action > 5){
     $uquery = 'UPDATE accounts SET recognitionbase = recognitionbase + 0.5 WHERE id = ?';
