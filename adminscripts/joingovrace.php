@@ -1,8 +1,6 @@
 <?php
 include 'connect.php';
-session_start();
-error_reporting(E_ALL);
-ini_set('display_errors', 'on');
+
 
 $con = OpenCon();
 $det = $con->prepare('SELECT polstate FROM accounts WHERE id = ?');
