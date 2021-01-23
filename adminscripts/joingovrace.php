@@ -11,19 +11,11 @@ $det->fetch();
 $det->close();
 
 $con = OpenCon();
-$det = $con->prepare('SELECT abbreviaton FROM states WHERE name = ?');
-$det->bind_param('s',$statename);
-$det->execute();
-$det->bind_result($stateabv);
-$det->fetch();
-$det->close();
-
-$con = OpenCon();
 $det = $con->prepare('INSERT INTO statexpartyrel VALUES (?,?,?,?,?)');
 $inc = 0;
 $party = 1;
 $race = 1;
-$det->bind_param('isiii', $_SESSION['id'],$stateabv,$inc,$party,$race); // gets the id var from the current session, binds it to the
+$det->bind_param('isiii', $_SESSION['id'],$statename,$inc,$party,$race); // gets the id var from the current session, binds it to the
 $det->execute();
 $det->fetch();
 $det->close();
