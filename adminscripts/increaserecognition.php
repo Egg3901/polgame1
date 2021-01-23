@@ -14,7 +14,7 @@ $det->close();
 if ($action < 5) {
     header('Location: ../campaignoffice.php');
 }
-if ($action > 5){
+if ($action >= 5){
     $uquery = 'UPDATE accounts SET recognitionbase = recognitionbase + 0.5 WHERE id = ?';
     $stmt = $con->prepare($uquery);
     $stmt->bind_param('i', $_SESSION['id']);
