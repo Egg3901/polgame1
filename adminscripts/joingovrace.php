@@ -1,5 +1,5 @@
 <?php
-include 'connect.php';
+include '../adminscripts/connect.php';
 
 
 $con = OpenCon();
