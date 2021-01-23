@@ -10,8 +10,6 @@ $stmt = $con->prepare($uquery);
 $stmt->bind_param('s', $_SESSION['polname']);
 $stmt->execute();
 $stmt->fetch();
-$stmt->close();
-$con = OpenCon();
 $uquery = 'UPDATE accounts SET influence = influence + 1 + (recognitionbase * .1) WHERE polname = ?';
 $stmt = $con->prepare($uquery);
 $stmt->bind_param('s', $_SESSION['polname']);
