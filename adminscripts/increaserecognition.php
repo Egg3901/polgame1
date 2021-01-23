@@ -33,5 +33,6 @@ if ($action > 5){
     $stmt->execute();
     $stmt->fetch();
     $stmt->close();
+    header('Location: ../campaignoffice.php');
 
 }
