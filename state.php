@@ -19,7 +19,11 @@ echo "
 </div>"
 
 ;
-
+$uquery = 'SELECT governor, jsen, ssen FROM states WHERE polstate = ?';
+$stmt = $con->prepare($uquery);
+$stmt->bind_param("s", $state);
+$stmt->execute();
+$stmt->bind_result($gov,$jsen,$ssen);
 echo "
     
     <br>
@@ -29,7 +33,7 @@ echo "
             <td>
                 <table>
                         <tr> <td style='text-align: center;'>Governor</td></tr>
-                        <tr> <td style='text-align: center;'>None</td> </tr>
+                        <tr> <td style='text-align: center;'>Governor " . $gov . "</td> </tr>
                 </table>
             </td>
             <td>
