@@ -9,6 +9,7 @@ $det = $con->prepare('FROM accounts SELECT action WHERE id = ?');
 $det->bind_param('i', $_SESSION['id']); // gets the id var from the current session, binds it to the
 $det->execute();
 $det->bind_result($action);
+$det->fetch();
 
 if ($action < 5) {
     header('Location: ../campaignoffice.php');
