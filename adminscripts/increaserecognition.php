@@ -10,7 +10,7 @@ $det->bind_param('i', $_SESSION['id']); // gets the id var from the current sess
 $det->execute();
 $det->bind_result($action);
 $det->fetch();
-
+$det->close();
 if ($action < 5) {
     header('Location: ../campaignoffice.php');
 }
@@ -35,4 +35,3 @@ if ($action > 5){
     $stmt->close();
 
 }
-$det->close();
