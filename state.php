@@ -149,12 +149,12 @@ print "</table>";
 echo "
 </td>
 <td>
-     <table border='.5' style='margin: auto;'>
+     <table border='.5' style='margin: auto; width: 9%;'>
          <tr>
             <th>Gubernatorial Election</th>
          </tr>
          <tr>
-            <table border='.5' >
+            <table border='.5' style='margin: auto; width: 9%;'>
                 <tr>
                     <td> Candidates</td>
                 </tr>
