@@ -46,7 +46,7 @@ echo "
             </td>
         </tr>
     </table>
-<table>
+<table style='margin: auto;'>
 <tr>
 <td>
     <table border='.5' style='margin:auto;'>
