@@ -3,7 +3,7 @@
 
 error_reporting(E_ALL);
 ini_set('display_errors', 'on');
-include 'connect.php';
+include 'adminscripts/connect.php';
 $con = OpenCon();
 if ( !isset($_POST['username'], $_POST['password']) ) {
     // Could not get the data that should have been sent.
