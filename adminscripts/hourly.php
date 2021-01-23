@@ -27,8 +27,6 @@ $stmt->close();
 
 $con = OpenCon();
 $uquery = "UPDATE accounts SET action = action + 5 WHERE seat = 'gov'";
-$seat = "gov";
-$stmt->bind_param('s', $seat); // gets the id var from the current session, binds it to the
 $stmt = $con->prepare($uquery);
 $stmt->execute();
 $stmt->fetch();
