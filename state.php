@@ -25,6 +25,8 @@ $stmt = $con->prepare($uquery);
 $stmt->bind_param("s", $statef);
 $stmt->execute();
 $stmt->bind_result($gov,$jsen,$ssen);
+$stmt->fetch();
+$stmt->close();
 echo "
     
     <br>
@@ -62,7 +64,7 @@ echo "
     
 ";
 
-
+$con = OpenCon();
 $uquery = 'SELECT influence, polname, social, economic FROM accounts WHERE polstate = ? ORDER BY influence DESC';
 $stmt = $con->prepare($uquery);
 $stmt->bind_param("s", $state);
