@@ -6,10 +6,10 @@ include 'navigation.php';
 <form action="adminscripts/increaserecognition.php">
 
 
-    <table>
-            <tr><input type="submit" value="Increase Campaign Infrastructure"></tr>
-            <tr><img src="img/mikeoffice"></tr>
-            <tr><p>Increasing your campaign infrastructure will increase your name recognition in your state. <br>
-                    Campaign offices will distribute signs, and register volunteers to canvas.</p></tr>
-    </table>
+    <div style="margin: auto"
+            <input type="submit" value="Increase Campaign Infrastructure"><br>
+            <img src="img/mikeoffice" alt="camp image"><br>
+            <p>Increasing your campaign infrastructure will increase your name recognition in your state. <br>
+                    Campaign offices will distribute signs, and register volunteers to canvas.</p>
+
 </form>
