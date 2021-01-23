@@ -156,10 +156,10 @@ echo "
          <tr>
             <table border='.5' style='margin: auto; width: 9%;'>
                 <tr>
-                    <td> Candidates</td>
+                    <td style='width: 9%'> Candidates</td>
                 </tr>
                 <tr>
-                    <td> None </td>
+                    <td style='width: 9%'>
                 </tr>
             </table>            
         </tr>
