@@ -20,7 +20,7 @@ echo "
 
 ;
 $con = OpenCon();
-$uquery = 'SELECT governor, jsen, ssen FROM states WHERE polstate = ?';
+$uquery = 'SELECT governor, jsen, ssen FROM states WHERE name = ?';
 $stmt = $con->prepare($uquery);
 $stmt->bind_param("s", $statef);
 $stmt->execute();
