@@ -160,6 +160,10 @@ echo "
          <tr>
             <th style='width: 9%'>Gubernatorial Election</th>
          </tr>
+         <br>
+         <form  action='adminscripts/joingovrace.php'>
+                <button type='submit' value='Join Race'> Join Gubernatorial Race</button>
+         </form>
          <tr>
             <table border='.5' style='margin: auto; width: 9%;'>
                 <tr>
