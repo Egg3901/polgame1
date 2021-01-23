@@ -6,7 +6,7 @@ include 'navigation.php';
 <form action="adminscripts/increaserecognition.php">
 
 
-    <p> <table>
+    <table>
             <tr><input type="submit" value="Increase Campaign Infrastructure"></tr>
             <tr><img src="img/mikeoffice"></tr>
             <tr><p>Increasing your campaign infrastructure will increase your name recognition in your state. <br>
