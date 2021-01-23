@@ -12,7 +12,7 @@ $det->close();
 
 $con = OpenCon();
 $det = $con->prepare('SELECT abbreviaton FROM states WHERE name = ?');
-$det->bind_param('s',$statename)
+$det->bind_param('s',$statename);
 $det->execute();
 $det->bind_result($stateabv);
 $det->fetch();
