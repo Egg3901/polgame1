@@ -19,6 +19,7 @@ $stmt->close();
     <title>AHD - <?=$polname?></title>
     <link href="/css/style.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
 </head>
 <body class="loggedin">
 <nav class="navtop">

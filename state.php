@@ -57,10 +57,10 @@ echo "
 <tr>
 <td>
     <table border='.5' style='margin:auto;'>
-        <th>Influence</th>
-        <th> Politician Name</th>
+        <th>Name Recognition</th>
+        <th>Politician Name</th>
         <th>Social Position</th>
-        <th> Economic Position</th>
+        <th>Economic Position</th>
     
 ";
 
@@ -169,14 +169,25 @@ echo "
                 <tr>
                     <td style='width: 9%'> Candidates</td>
                 </tr>
-                <tr>
-                    <td style='width: 9%'> None </td>
-                </tr>
-            </table>            
-        </tr>
-    </table>
-</td>
-";
+                "
+                $con = OpenCon();
+                $uquery = 'SELECT id FROM statex WHERE polstate = ? ORDER BY influence DESC';
+                $stmt = $con->prepare($uquery);
+                $stmt->bind_param("s", $state);
+                $stmt->execute();
+                $result = $stmt->get_result();
+
+                foreach ($result as $row) {
+                    print " <tr> ";
+                    $iter = 0;
+                    foreach ($row as $polname=>$data){
+                        if ($iter = 0) {  //influence
+                            print " <td> $data % </Td>";
+                            </table>
+                        </tr>
+                    </table>
+                </td>
+                ";
 print "</table>";
 print "</div>";
 print "</div>";
