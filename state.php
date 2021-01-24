@@ -63,14 +63,13 @@ echo "
         <th>Economic Position</th>
     
 ";
-
+// get the state page data
 $con = OpenCon();
 $uquery = 'SELECT influence, polname, social, economic FROM accounts WHERE polstate = ? ORDER BY influence DESC';
 $stmt = $con->prepare($uquery);
 $stmt->bind_param("s", $state);
 $stmt->execute();
 $result = $stmt->get_result();
-
 foreach ($result as $row) {
     print " <tr> ";
     $iter = 0;
@@ -153,6 +152,7 @@ foreach ($result as $row) {
     print " </tr> ";
 }
 print "</table>";
+
 echo "
 </td>
 <td>
@@ -168,10 +168,11 @@ echo "
             <table border='.5' style='margin: auto; width: 9%;'>
                 <tr>
                     <td style='width: 9%'> Candidates</td>
-                </tr>
-                "
+                </tr>";
+
+
                 $con = OpenCon();
-                $uquery = 'SELECT id FROM statex WHERE polstate = ? ORDER BY influence DESC';
+                $uquery = 'SELECT id FROM statexpartyrel WHERE polstate = ? ORDER BY influence DESC';
                 $stmt = $con->prepare($uquery);
                 $stmt->bind_param("s", $state);
                 $stmt->execute();
@@ -183,11 +184,10 @@ echo "
                     foreach ($row as $polname=>$data){
                         if ($iter = 0) {  //influence
                             print " <td> $data % </Td>";
-                            </table>
-                        </tr>
-                    </table>
-                </td>
-                ";
+                        };
+                        print " </tr>"
+
+                
 print "</table>";
 print "</div>";
 print "</div>";
