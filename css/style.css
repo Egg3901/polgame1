@@ -5,13 +5,16 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-body {
-    background-color: #acbed7;
-}
-
 h1 {
     font-family: 'Source Sans Pro', sans-serif;
     color: #2f3947;
+}
+body {
+    background-color: #acbed7;
+    margin: 0;
+}
+body.loggedin {
+    background-color: #f3f4f7;
 }
 .scale
 {
@@ -112,9 +115,7 @@ h1 {
 .navtop div a:hover {
     color: #eaebed;
 }
-body.loggedin {
-    background-color: #f3f4f7;
-}
+
 .content {
     width: 1000px;
     margin: 0 auto;
@@ -154,10 +155,7 @@ body.loggedin {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-body {
-    background-color: #435165;
-    margin: 0;
-}
+
 .register {
     width: 400px;
     background-color: #ffffff;
@@ -200,7 +198,6 @@ body {
     margin-bottom: 20px;
     padding: 0 15px;
 }
-
 .register form input[type="submit"] {
     width: 100%;
     padding: 15px;
@@ -216,36 +213,8 @@ body {
     background-color: #2868c7;
     transition: background-color 0.2s;
 }
-/* Tooltip container */
-.tooltip {
-    position: relative;
-    display: inline-block;
-    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
-}
 
-/* Tooltip text */
-.tooltip .tooltiptext {
-    visibility: hidden;
-    width: 120px;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    padding: 5px 0;
-    border-radius: 6px;
 
-    /* Position the tooltip text */
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -60px;
-
-    /* Fade in tooltip */
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-/* Tooltip arrow */
 .tooltip .tooltiptext::after {
     content: "";
     position: absolute;
@@ -260,19 +229,4 @@ body {
     width:300px;
     height: auto;
 }
-/* Show the tooltip text when you mouse over the tooltip container */
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
-}
-.center div {
-    background: black;
-    color: white;
-    border-radius: 1em;
-    padding: 1em;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-}
+
