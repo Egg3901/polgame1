@@ -5,6 +5,9 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+.race {
+    width: 10%;
+}
 h1 {
     font-family: 'Source Sans Pro', sans-serif;
     color: #2f3947;

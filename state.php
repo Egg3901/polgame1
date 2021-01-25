@@ -156,20 +156,18 @@ print "</table>";
 echo "
 </td>
 <td>
-     <div>
+     <div style='width: 11%'>
          <h1> Gubernatorial Election</h1>
          <br>
-         <form  action='adminscripts/joingovrace.php'>
-                <button type='submit' value='Join Race'> Join Gubernatorial Race</button>
-         </form>
+         
          <tr>
-            <table border='.5' style='margin: auto; width: 9%;'>
-                <th>
+            <table border='.5' style='margin: auto;' class='race'>
+                <th style='width: 9%;'>
                     Candidates
                 </th>
-                <table border='.5' style='margin:auto;'>
-                        <th>Politician Name</th>
-                        <th>Name Recognition</th>";
+                <table border='.5'  class='race' style='margin:auto;'>
+                        <th class='race'>Politician Name</th>
+                        <th class='race'>Name Recognition</th>";
 
 
                 $con = OpenCon();
@@ -187,9 +185,16 @@ echo "
                     }
                     print " </tr>";
                 }
-                print "</table>";
+                echo "
+                <form  action='adminscripts/joingovrace.php'>
+                    <button type='submit' value='Join Race'> Join Gubernatorial Race</button>
+                </form>
+            </table>
+         </div>
+    </div>
+</div>
+                
+";
 
-print "</div>";
-print "</div>";
-print "</div>";
-?>
+
+
