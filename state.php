@@ -164,10 +164,10 @@ echo "
      <div>
         <h1 style='text-align: center;'> Gubernatorial Election</h1>
         
-        <table class='race'>
-            <th class='race' name='Candidates' style='text-align: center;'>
-                <p style='text-align: center;'>Candidates</p>
-            </th>
+        <table class='race' style='text-align; auto;'>
+            
+                <h1 style='text-align: center;'>Candidates</h1>
+            
             <table border='.5'  class='race' style='margin:auto;'>
                     <th class='race'>Politician Name</th>
                     <th class='race'>Name Recognition</th>";
