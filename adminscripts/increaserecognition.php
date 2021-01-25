@@ -20,6 +20,7 @@ if ($action >= 5){
     $stmt->bind_param('i', $_SESSION['id']);
     $stmt->execute();
     $stmt->fetch();
+    $stmt->close();
     $uquery = 'UPDATE accounts SET influence = influence + 1 + (recognitionbase * .1) WHERE id = ?';
     $stmt = $con->prepare($uquery);
     $stmt->bind_param('i', $_SESSION['id']);
