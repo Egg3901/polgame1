@@ -181,13 +181,13 @@ echo "
                     print " <tr> ";
                     $iter = 0;
                     foreach ($row as $polname => $data) {
-                        print " <td> $data % </Td>";
+                        print " <td> $data </Td>";
                     }
                     print " </tr>";
                 }
                 echo "
                 <div style='text-align: center;'>
-                    <form  action='adminscripts/joingovrace.php' style='margin: auto;'>
+                    <form  action='adminscripts/joingovrace.php' class='race'>
                             <button type='submit' value='Join Race' style='margin: auto;'> Join Gubernatorial Race</button>
                     </form>
                 </div>
