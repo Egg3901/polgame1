@@ -162,7 +162,7 @@ echo "
          
          <tr>
             <table class='race'>
-                <th>
+                <th class='race' name='Candidates'>
                     Candidates
                 </th>
                 <table border='.5'  class='race' style='margin:auto;'>
