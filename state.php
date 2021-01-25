@@ -156,19 +156,17 @@ print "</table>";
 echo "
 </td>
 <td>
-     <table border='.5' style='margin: auto; width: 9%;'>
-         <tr>
-            <th style='width: 9%'>Gubernatorial Election</th>
-         </tr>
+     <div>
+         <h1> Gubernatorial Election</h1>
          <br>
          <form  action='adminscripts/joingovrace.php'>
                 <button type='submit' value='Join Race'> Join Gubernatorial Race</button>
          </form>
          <tr>
             <table border='.5' style='margin: auto; width: 9%;'>
-                <tr>
-                    <td style='width: 9%'> Candidates</td>
-                </tr
+                <th>
+                    Candidates
+                </th>
                 <table border='.5' style='margin:auto;'>
                         <th>Politician Name</th>
                         <th>Name Recognition</th>";
@@ -191,7 +189,7 @@ echo "
                 }
                 print "</table>";
 
-print "</table>";
+print "</div>";
 print "</div>";
 print "</div>";
 ?>
