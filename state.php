@@ -155,11 +155,13 @@ foreach ($result as $row) {
     print " </tr> ";
 }
 print "</table>
-</div>
+
 ";
 
 echo "
 
+<br>
+</div>
 <div class='gov'>
      <div>
         <h1> Gubernatorial Election</h1>
