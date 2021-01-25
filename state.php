@@ -165,7 +165,7 @@ echo "
         <h1 style='text-align: center;'> Gubernatorial Election</h1>
         <br>
         <table class='race'>
-            <th class='race' name='Candidates' style='text-align: center;>
+            <th class='race' name='Candidates' style='text-align: center;'>
                 Candidates
             </th>
             <table border='.5'  class='race' style='margin:auto;'>
