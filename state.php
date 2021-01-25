@@ -189,7 +189,7 @@ echo "
                 
             </table>
             <form  action='adminscripts/joingovrace.php' style='margin:auto;'>
-                    <button type='submit' value='Join Race'> Join Gubernatorial Race</button>
+                    <button type='submit' value='Join Race' style='margin:auto;'> Join Gubernatorial Race</button>
                 </form>
          </div>
     </div>
