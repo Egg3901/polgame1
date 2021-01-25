@@ -168,11 +168,14 @@ echo "
             <table border='.5' style='margin: auto; width: 9%;'>
                 <tr>
                     <td style='width: 9%'> Candidates</td>
-                </tr>";
+                </tr
+                <table border='.5' style='margin:auto;'>
+                        <th>Politician Name</th>
+                        <th>Name Recognition</th>";
 
 
                 $con = OpenCon();
-                $uquery = 'SELECT id FROM statexpartyrel WHERE polstate = ? ORDER BY influence DESC';
+                $uquery = 'SELECT name, influence, FROM accounts WHERE polstate = ? AND race = 1  ORDER BY influence DESC';
                 $stmt = $con->prepare($uquery);
                 $stmt->bind_param("s", $state);
                 $stmt->execute();
@@ -188,6 +191,7 @@ echo "
                         print " </tr>";
                     }
                 }
+                print "</table>";
 
 
 print "</table>";
