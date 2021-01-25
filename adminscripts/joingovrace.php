@@ -15,6 +15,6 @@ $det->execute();
 $det->bind_result($state);
 $det->fetch();
 $det->close();
-header("Location: state.php?state=$state");
+header("Location: ../state.php?state=$state");
 
 
