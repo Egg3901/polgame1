@@ -27,7 +27,7 @@ if ($action >= 5){
     $stmt->execute();
     $stmt->fetch();
     $stmt->close();
-    $action = round($action - 8);
+    $action = round($action - 10);
     $uquery = 'UPDATE accounts SET action = ? WHERE id = ? ';
     $stmt = $con->prepare($uquery);
     $stmt->bind_param('ii', $action,$_SESSION['id']);
