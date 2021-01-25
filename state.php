@@ -175,7 +175,7 @@ echo "
 
 
                 $con = OpenCon();
-                $uquery = 'SELECT name, influence, FROM accounts WHERE polstate = ? AND race = 1  ORDER BY influence DESC';
+                $uquery = 'SELECT polname, influence, FROM accounts WHERE polstate = ? AND race = 1  ORDER BY influence DESC';
                 $stmt = $con->prepare($uquery);
                 $stmt->bind_param("s", $state);
                 $stmt->execute();
