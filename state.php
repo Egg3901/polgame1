@@ -31,7 +31,7 @@ echo "
     
     <br>
     <div style='margin: auto;'>
-    <table style='margin:auto;'>
+    <table class='blueTable'; style='margin: auto;'>
         <tr>
             <td>
                 <table>
