@@ -163,10 +163,10 @@ echo "
 <div class='gov'>
      <div>
         <h1 style='text-align: center;'> Gubernatorial Election</h1>
-        <br>
+        
         <table class='race'>
             <th class='race' name='Candidates' style='text-align: center;'>
-                <p></p>Candidates
+                <p>Candidates</p>
             </th>
             <table border='.5'  class='race' style='margin:auto;'>
                     <th class='race'>Politician Name</th>
@@ -192,7 +192,7 @@ echo "
             
         </table>
         <div style='text-align: center;'>
-                <form  action='adminscripts/joingovrace.php' class='race' style='margin: auto; width: 10%'>
+                <form  action='adminscripts/joingovrace.php' class='race' style='margin: auto; width: 11%'>
                         <button type='submit' value='Join Race' style='margin: auto; width: 100%'> Join Gubernatorial Race</button>
                 </form>
         </div>
