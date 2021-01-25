@@ -55,10 +55,8 @@ echo "
             </table>
         </div>
     </div>
-<div class='politicians'>div>
-    <table style='margin: auto;'>
-    <tr>
-    <td>
+<div class='politicians'>
+    
         <table class='blueTable'>
             <th>Name Recognition</th>
             <th>Politician Name</th>
