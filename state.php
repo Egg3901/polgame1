@@ -166,7 +166,7 @@ echo "
         
         <table class='race'>
             <th class='race' name='Candidates' style='text-align: center;'>
-                <p>Candidates</p>
+                <p style='text-align: center;'>Candidates</p>
             </th>
             <table border='.5'  class='race' style='margin:auto;'>
                     <th class='race'>Politician Name</th>
