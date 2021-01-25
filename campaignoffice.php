@@ -3,6 +3,18 @@
 include 'navigation.php';
 ?>
 <!DOCTYPE HTML>
+<table>
+    <th>Your Political Party</th>
+    <th>Party Alignment</th>
+    <?php
+        $con = OpenCon(); // opens a connection to the database, this function is from the above included script
+        $stmt = $con->prepare('SELECT polstate, polname FROM accounts WHERE id = ?');
+        $stmt->bind_param('i', $_SESSION['id']);
+        $stmt->execute();
+        $stmt->bind_result($polstate, $polname);
+
+    ?>
+</table>
 <div class="main">
     <form action="adminscripts/increaserecognition.php">
         <div style="margin: auto; width=30%;">
