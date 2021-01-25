@@ -185,15 +185,12 @@ echo "
                     print " <tr> ";
                     $iter = 0;
                     foreach ($row as $polname => $data) {
-                        if ($iter = 0) {  //influence
-                            print " <td> $data % </Td>";
-                        };
-                        print " </tr>";
+                        print " <td> $data % </Td>";
                     }
+                    print " </tr>";
                 }
                 print "</table>";
-
-
+                
 print "</table>";
 print "</div>";
 print "</div>";
