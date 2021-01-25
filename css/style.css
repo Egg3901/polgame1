@@ -5,7 +5,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-.race  {
+.race, .race table th, .race table  {
     width: 10%;
     margin: auto;
     text-align: center;
