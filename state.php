@@ -10,13 +10,13 @@ $state = str_replace('+', ' ', $statef);
 $imgsource = "img/states/{$statef}";
 
 echo "
-<div>
+<div class='grid-container'>
 <br>
-<div>
-    <h1 style='text-align: center; font-size: 40px;'>The State of   " . $state . "   </h1>
-    <br>
-    <img style='width: 30%; height: auto; border: 2px solid black; display: block; margin: auto;' src=$imgsource alt='state image'>
-</div>"
+    <div class='State-Flag'>
+        <h1 style='text-align: center; font-size: 40px;'>The State of   " . $state . "   </h1>
+        <br>
+        <img style='width: 30%; height: auto; border: 2px solid black; display: block; margin: auto;' src=$imgsource alt='state image'>
+"
 
 ;
 $con = OpenCon();
@@ -29,38 +29,41 @@ $stmt->fetch();
 $stmt->close();
 echo "
     
-    <br>
-    <div style='margin: auto;'>
-    <table class='blueTable' style='margin: auto; width: 10%'>
-        <tr>
-            <td>
-                <table>
-                        <tr> <td style='text-align: center;'>Governor</td></tr>
-                        <tr> <td style='text-align: center;'>Governor " . $gov . "</td> </tr>
-                </table>
-            </td>
-            <td>
-                <table>
-                        <tr> <td style='text-align: center;'>Junior Senator</td></tr>
-                        <tr> <td style='text-align: center;'>None</td> </tr>
-                </table>
-            </td>
-            <td>
-                <table>
-                        <tr> <td style='text-align: center;'>Senior Senator</td></tr>
-                        <tr> <td style='text-align: center;'>None</td> </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
-<table style='margin: auto;'>
-<tr>
-<td>
-    <table class='blueTable'>
-        <th>Name Recognition</th>
-        <th>Politician Name</th>
-        <th>Social Position</th>
-        <th>Economic Position</th>
+        <br>
+        <div style='margin: auto;'>
+            <table class='blueTable' style='margin: auto; width: 10%'>
+                <tr>
+                    <td>
+                        <table>
+                                <tr> <td style='text-align: center;'>Governor</td></tr>
+                                <tr> <td style='text-align: center;'>Governor " . $gov . "</td> </tr>
+                        </table>
+                    </td>
+                    <td>
+                        <table>
+                                <tr> <td style='text-align: center;'>Junior Senator</td></tr>
+                                <tr> <td style='text-align: center;'>None</td> </tr>
+                        </table>
+                    </td>
+                    <td>
+                        <table>
+                                <tr> <td style='text-align: center;'>Senior Senator</td></tr>
+                                <tr> <td style='text-align: center;'>None</td> </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+<div class='politicians'>div>
+    <table style='margin: auto;'>
+    <tr>
+    <td>
+        <table class='blueTable'>
+            <th>Name Recognition</th>
+            <th>Politician Name</th>
+            <th>Social Position</th>
+            <th>Economic Position</th>
     
 ";
 // get the state page data
@@ -154,47 +157,43 @@ foreach ($result as $row) {
 print "</table>";
 
 echo "
-</td>
-<td style='margin: auto;'>
-     <div style='width: 11%'>
-         <h1> Gubernatorial Election</h1>
-         <br>
-         
-         <tr>
-            <table class='race'>
-                <th class='race' name='Candidates'>
-                    Candidates
-                </th>
-                <table border='.5'  class='race' style='margin:auto;'>
-                        <th class='race'>Politician Name</th>
-                        <th class='race'>Name Recognition</th>";
+</div>
+<div class='gov'>
+     <div>
+        <h1> Gubernatorial Election</h1>
+        <br>
+        <table class='race'>
+            <th class='race' name='Candidates'>
+                Candidates
+            </th>
+            <table border='.5'  class='race' style='margin:auto;'>
+                    <th class='race'>Politician Name</th>
+                    <th class='race'>Name Recognition</th>";
 
 
-                $con = OpenCon();
-                $uquery = 'SELECT polname, influence FROM accounts WHERE polstate = ? AND rrace = 1  ORDER BY influence DESC';
-                $stmt = $con->prepare($uquery);
-                $stmt->bind_param("s", $state);
-                $stmt->execute();
-                $result = $stmt->get_result();
+            $con = OpenCon();
+            $uquery = 'SELECT polname, influence FROM accounts WHERE polstate = ? AND rrace = 1  ORDER BY influence DESC';
+            $stmt = $con->prepare($uquery);
+            $stmt->bind_param("s", $state);
+            $stmt->execute();
+            $result = $stmt->get_result();
 
-                foreach ($result as $row) {
-                    print " <tr> ";
-                    $iter = 0;
-                    foreach ($row as $polname => $data) {
-                        print " <td> $data </Td>";
-                    }
-                    print " </tr>";
+            foreach ($result as $row) {
+                print " <tr> ";
+                $iter = 0;
+                foreach ($row as $polname => $data) {
+                    print " <td> $data </Td>";
                 }
-                echo "
-                <div style='text-align: center;'>
-                    <form  action='adminscripts/joingovrace.php' class='race'>
-                            <button type='submit' value='Join Race' style='margin: auto;'> Join Gubernatorial Race</button>
-                    </form>
-                </div>
-            </table>
-            
-            
-         </div>
+                print " </tr>";
+            }
+            echo "
+            <div style='text-align: center;'>
+                <form  action='adminscripts/joingovrace.php' class='race'>
+                        <button type='submit' value='Join Race' style='margin: auto;'> Join Gubernatorial Race</button>
+                </form>
+            </div>
+        </table>
+     </div>
     </div>
 </div>
                 

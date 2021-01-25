@@ -5,6 +5,23 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+.grid-container {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+    "State-Flag State-Flag State-Flag State-Flag"
+    "politicians politicians gov jsenate"
+    "state-info state-info ssenate house";
+}
+.State-Flag { grid-area: State-Flag; }
+.politicians { grid-area: politicians; }
+.gov { grid-area: gov; }
+.jsenate { grid-area: jsenate; }
+.ssenate { grid-area: ssenate; }
+.house { grid-area: house; }
+.state-info { grid-area: state-info; }
 .race, .race table th, .race table  {
     width: 10%;
     margin: auto;
