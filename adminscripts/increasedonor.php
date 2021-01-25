@@ -15,12 +15,12 @@ if ($action < 5) {
     header('Location: ../profile.php');
 }
 if ($action >= 5){
-    $uquery = 'UPDATE accounts SET donors = donors + 0.5 WHERE id = ?';
+    $uquery = 'UPDATE accounts SET fundbase = fundbase + 0.5 WHERE id = ?';
     $stmt = $con->prepare($uquery);
     $stmt->bind_param('i', $_SESSION['id']);
     $stmt->execute();
     $stmt->fetch();
-    $uquery = 'UPDATE funding SET funding = funding + 10000 * (donors * 2000) WHERE id = ?';
+    $uquery = 'UPDATE funding SET funding = funding + 10000 * (fundbase * 2000) WHERE id = ?';
     $stmt = $con->prepare($uquery);
     $stmt->bind_param('i', $_SESSION['id']);
     $stmt->execute();
