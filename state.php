@@ -189,12 +189,13 @@ echo "
                 print " </tr>";
             }
             echo "
-            <div style='text-align: center;'>
+            
+        </table>
+        <div style='text-align: center;'>
                 <form  action='adminscripts/joingovrace.php' class='race'>
                         <button type='submit' value='Join Race' style='margin: auto; width: 9%'> Join Gubernatorial Race</button>
                 </form>
-            </div>
-        </table>
+        </div>
      </div>
     </div>
 </div>
