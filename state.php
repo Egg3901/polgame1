@@ -161,8 +161,8 @@ echo "
          <br>
          
          <tr>
-            <table border='.5' style='margin: auto; text-align:center;' class='race'>
-                <th style='width: 9%;'>
+            <table class='race'>
+                <th>
                     Candidates
                 </th>
                 <table border='.5'  class='race' style='margin:auto;'>
