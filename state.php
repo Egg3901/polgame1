@@ -186,11 +186,14 @@ echo "
                     print " </tr>";
                 }
                 echo "
-                
+                <div style='text-align: center;'>
+                    <form  action='adminscripts/joingovrace.php' style='margin: auto;'>
+                            <button type='submit' value='Join Race' style='margin: auto;'> Join Gubernatorial Race</button>
+                    </form>
+                </div>
             </table>
-            <form  action='adminscripts/joingovrace.php' style='margin: auto;'>
-                    <button type='submit' value='Join Race' style='margin: auto;'> Join Gubernatorial Race</button>
-                </form>
+            
+            
          </div>
     </div>
 </div>
