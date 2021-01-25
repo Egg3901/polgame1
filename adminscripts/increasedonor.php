@@ -20,7 +20,7 @@ if ($action >= 5){
     $stmt->bind_param('i', $_SESSION['id']);
     $stmt->execute();
     $stmt->fetch();
-    $uquery = 'UPDATE funding SET funding = funding + 10000 * (recognitionbase * 2) WHERE id = ?';
+    $uquery = 'UPDATE funding SET funding = funding + 10000 * (donors * 2000) WHERE id = ?';
     $stmt = $con->prepare($uquery);
     $stmt->bind_param('i', $_SESSION['id']);
     $stmt->execute();
