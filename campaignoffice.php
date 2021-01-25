@@ -17,7 +17,7 @@ include 'navigation.php';
 </table>
 <div class="main">
     <form action="adminscripts/increaserecognition.php">
-        <div style="margin: auto; width=30%;">
+        <div style=" width=30%;">
 
             <button type="submit" ><br>
                 <h1 style="margin: auto;"> Build Campaign Infrastructure</h1><br>
@@ -28,7 +28,7 @@ include 'navigation.php';
         </div>
     </form>
     <form action="adminscripts/increasedonorbase.php">
-        <div style="margin: auto; width=30%;">
+        <div style=" width=30%;">
             <button type="submit" ><br>
                 <h1 style="margin: auto;"> Appeal To Grassroots Donors</h1><br>
                 <img src="img/mikeoffice" alt="camp image" style="margin:auto;" border=".5"><br>
