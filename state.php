@@ -56,7 +56,7 @@ echo "
 <table style='margin: auto;'>
 <tr>
 <td>
-    <table border='.5' style='margin:auto;'>
+    <table class='blueTable'>
         <th>Name Recognition</th>
         <th>Politician Name</th>
         <th>Social Position</th>
@@ -155,7 +155,7 @@ print "</table>";
 
 echo "
 </td>
-<td>
+<td style='margin: auto;'>
      <div style='width: 11%'>
          <h1> Gubernatorial Election</h1>
          <br>
