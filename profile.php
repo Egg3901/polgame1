@@ -5,14 +5,25 @@ if (!isset($_SESSION['loggedin'])) {
     header('Location: index.html');
     exit;
 }
-
-$con = OpenCon(); // opens a connection to the database, this function is from the above included script
-$stmt = $con->prepare('SELECT password, email, influence, polstate, polname, imgurl, social, economic, action, funding FROM accounts WHERE id = ?');
-$stmt->bind_param('i', $_SESSION['id']); // gets the id var from the current session, binds it to the
-$stmt->execute();
-$stmt->bind_result($password, $email, $influence, $polstate, $polname, $imgurl, $social, $economic, $ap, $funds);
-$stmt->fetch();
-$stmt->close();
+$id = $_GET['id'];
+if (is_null($id)) {
+    $con = OpenCon(); // opens a connection to the database, this function is from the above included script
+    $stmt = $con->prepare('SELECT password, email, influence, polstate, polname, imgurl, social, economic, action, funding FROM accounts WHERE id = ?');
+    $stmt->bind_param('i', $_SESSION['id']); // gets the id var from the current session, binds it to the
+    $stmt->execute();
+    $stmt->bind_result( $email, $influence, $polstate, $polname, $imgurl, $social, $economic, $ap, $funds);
+    $stmt->fetch();
+    $stmt->close();
+}
+else {
+    $con = OpenCon(); // opens a connection to the database, this function is from the above included script
+    $stmt = $con->prepare('SELECT password, email, influence, polstate, polname, imgurl, social, economic, action, funding FROM accounts WHERE id = ?');
+    $stmt->bind_param('i', $_SESSION['id']); // gets the id var from the current session, binds it to the
+    $stmt->execute();
+    $stmt->bind_result( $influence, $polstate, $polname, $imgurl, $social, $economic, $ap, $funds);
+    $stmt->fetch();
+    $stmt->close();
+}
 ?>
 
 
@@ -117,21 +128,33 @@ $stmt->close();
                 </td>
             </tr>  <!--- economic position formatting ---->
         </table>
-        <table>
-            <tr>
-                <p><i>Your account details are below (Only Visible to you):<i></i></p>
-            </tr>
-            <tr>
-                <td>Username:</td>
-                <td><?=$_SESSION['name']?></td>
-            </tr>
+        <?php
+        if (isset($id)) {
 
-            <tr>
-                <td>Email:</td>
-                <td><?=$email?></td>
-            </tr>
+        }
+        else if (is_null($id)){
+            echo"
+            <table>
+                <tr>
+                    <p><i>Your account details are below (Only Visible to you):<i></i></p>
+                </tr>
+                <tr>
+                    <td>Username:</td>
+                    <td>" . $_SESSION['name'] . "</td>
+                </tr>
 
-        </table>
+                <tr>
+                    <td>Email:</td>
+                    <td>" . $email . "</td>
+                </tr>
+
+        </table>";
+        }
+        else {
+            header("Location: index.html");
+        }
+
+        ?>
     </div>
 </div>
 </body>
