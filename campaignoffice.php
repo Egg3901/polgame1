@@ -15,9 +15,9 @@ include 'navigation.php';
     "campinf funding ."
     ". . .";
         }
-        .-heavy { grid-area: -heavy; }
-        .campinf { grid-area: campinf; }
-        .funding { grid-area: funding; }
+        .-heavy { grid-area: -heavy; width: 100%; height:auto;}
+        .campinf { grid-area: campinf; width: 33%; height:auto; }
+        .funding { grid-area: funding; width: 33%; height:auto; }
 
     </style>
 
