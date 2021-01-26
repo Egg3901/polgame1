@@ -10,8 +10,7 @@ $state = str_replace('+', ' ', $statef);
 $imgsource = "img/states/{$statef}";
 
 echo "
-<div class='grid-container'>
-<br>
+
     <div class='State-Flag'>
         <h1 style='text-align: center; font-size: 40px;'>The State of   " . $state . "   </h1>
         <br>
@@ -28,6 +27,7 @@ $stmt->bind_result($gov,$jsen,$ssen);
 $stmt->fetch();
 $stmt->close();
 echo "
+</div>
     <table class='blueTable' style='margin: auto; width: 10%'>
                 <tr>
                     <td>
@@ -49,7 +49,8 @@ echo "
                         </table>
                     </td>
                 </tr>
-            </table>
+    </table>
+            
         
             
   
