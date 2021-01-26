@@ -59,8 +59,9 @@ include 'navigation.php';
                     <button type="submit" ><br>
                         <h1 style="margin: auto;"> Appeal To Grassroots Donors</h1><br>
                         <img src="img/campaignoffice/donorbase" alt="donorbase image" style="margin:auto; width: 33%; height:auto;" border=".5"><br>
-                        <p>Appealing to grassroots donors increases your hourly income from them in the form of donations.<br>
-                            Grasroots appeal is lowered by appealing to corporate donors, and is less effective for moderate candidates.</p><br>
+                        <p>Appealing to grassroots donors increases your hourly income from them in the form of<br>
+                            donations. Grasroots appeal is lowered by appealing to corporate donors, and is <br>
+                            less effective for moderate candidates.</p><br>
                         <p><strong> Costs 10 actions. </strong></p>
                 </div>
             </form>
