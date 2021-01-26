@@ -28,7 +28,7 @@ $stmt->fetch();
 $stmt->close();
 echo "
 </div>
-    <table class='blueTable' style='margin: auto; width: 10%'>
+    <table class='blueTable'>
                 <tr>
                     <td>
                         <table>
