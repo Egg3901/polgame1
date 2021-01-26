@@ -42,7 +42,7 @@ include 'navigation.php';
         </div>
 
         <div class="campinf">
-            <form action="adminscripts/increaserecognition.php.php">
+            <form action="adminscripts/increaserecognition.php">
                 <div>
                     <button type="submit" ><br>
                         <h1 style="margin: auto;"> Build Campaign Infrastructure</h1><br>
