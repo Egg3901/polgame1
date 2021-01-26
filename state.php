@@ -72,9 +72,6 @@ $stmt->bind_param("s", $state);
 $stmt->execute();
 $result = $stmt->get_result();
 foreach ($result as $row) {
-    echo "
-    <p> implode($row) </p>
-    ";
     $data = $row;
     print " <tr> ";
     $i = $data['influence'];
@@ -84,7 +81,7 @@ foreach ($result as $row) {
     <td> $n </td>    
 
         ";
-    $social = $data[2];
+    $social = $data['social'];
     if ($social <= 5){
         $formattedsocial = "Very Right Wing";
     }
@@ -113,7 +110,7 @@ foreach ($result as $row) {
         $formattedsocial = "Libertarian Left";
     }
     print " <td> $formattedsocial </td> ";
-    $economic = $data[3];
+    $economic = $data['economic'];
     if ($economic <= 5){
         $formattedeconomic = "Libertarian Right";
     }
