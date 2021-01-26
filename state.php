@@ -71,74 +71,74 @@ $stmt = $con->prepare($uquery);
 $stmt->bind_param("s", $state);
 $stmt->execute();
 $result = $stmt->bind_result($inf,$polname,$social,$economic);
-foreach ($result as $row) {
+foreach ($result as $data) {
     print " <tr> ";
-    $iter = 0;
-    foreach ($row as $data){
-        echo " 
-        <td> $data[0]% </td> //influence
-        <td> $data[1] </Td>    //name
 
-            ";
-        $social = $data[2];
-        if ($social <= 5){
-            $formattedsocial = "Very Right Wing";
-        }
-        if ($social <= 4){
-            $formattedsocial = "Right Wing";
-        }
-        if ($social <= 3){
-            $formattedsocial = "Leans Right Wing";
-        }
-        if ($social <= 1){
-            $formattedsocial = "Center Right";
-        }
-        if ($social <= 0){
-            $formattedsocial = "Centrist";
-        }
-        if ($social <= -1){
-            $formattedsocial = "Center Left";
-        }
-        if ($social <= -3){
-            $formattedsocial = "Leans Left Wing";
-        }
-        if ($social <= -4){
-            $formattedsocial = "Left Wing";
-        }
-        if ($social <= -5) {
-            $formattedsocial = "Libertarian Left";
-        }
-        print " <td> $formattedsocial </td> ";
-        $economic = $data[3];
-        if ($economic <= 5){
-            $formattedeconomic = "Libertarian Right";
-        }
-        if ($economic <= 4){
-            $formattedeconomic = "Right Wing";
-        }
-        if ($economic <= 3){
-            $formattedeconomic = "Leans Right Wing";
-        }
-        if ($economic <= 1){
-            $formattedeconomic = "Center Right";
-        }
-        if ($economic <= 0){
-            $formattedeconomic = "Centrist";
-        }
-        if ($economic <= -1){
-            $formattedeconomic = "Center Left";
-        }
-        if ($economic <= -3){
-            $formattedeconomic = "Leans Left Wing";
-        }
-        if ($economic <= -4){
-            $formattedeconomic = "Left Wing";
-        }
-        if ($economic <= -5){
-            $formattedeconomic = "Very Left Wing";
-        }
-        print " <td> $formattedsocial </td> ";
+    echo " 
+    <td> $data[0]% </td> //influence
+    <td> $data[1] </Td>    //name
+
+        ";
+    $social = $data[2];
+    if ($social <= 5){
+        $formattedsocial = "Very Right Wing";
     }
+    if ($social <= 4){
+        $formattedsocial = "Right Wing";
+    }
+    if ($social <= 3){
+        $formattedsocial = "Leans Right Wing";
+    }
+    if ($social <= 1){
+        $formattedsocial = "Center Right";
+    }
+    if ($social <= 0){
+        $formattedsocial = "Centrist";
+    }
+    if ($social <= -1){
+        $formattedsocial = "Center Left";
+    }
+    if ($social <= -3){
+        $formattedsocial = "Leans Left Wing";
+    }
+    if ($social <= -4){
+        $formattedsocial = "Left Wing";
+    }
+    if ($social <= -5) {
+        $formattedsocial = "Libertarian Left";
+    }
+    print " <td> $formattedsocial </td> ";
+    $economic = $data[3];
+    if ($economic <= 5){
+        $formattedeconomic = "Libertarian Right";
+    }
+    if ($economic <= 4){
+        $formattedeconomic = "Right Wing";
+    }
+    if ($economic <= 3){
+        $formattedeconomic = "Leans Right Wing";
+    }
+    if ($economic <= 1){
+        $formattedeconomic = "Center Right";
+    }
+    if ($economic <= 0){
+        $formattedeconomic = "Centrist";
+    }
+    if ($economic <= -1){
+        $formattedeconomic = "Center Left";
+    }
+    if ($economic <= -3){
+        $formattedeconomic = "Leans Left Wing";
+    }
+    if ($economic <= -4){
+        $formattedeconomic = "Left Wing";
+    }
+    if ($economic <= -5){
+        $formattedeconomic = "Very Left Wing";
+    }
+    print " <td> $formattedsocial </td> ";
+
+
     print " </tr> ";
 }
 print "</table>
