@@ -76,7 +76,7 @@ foreach ($result as $row) {
     $pid = $data['id'];
     echo " 
     <td> $i% </td> 
-    <td> <a href='profile.php/id=$pid'>$n </td>    
+    <td> <a href='profile.php?id=$pid'>$n </td>    
 
         ";
     $social = $data['social'];
