@@ -54,7 +54,18 @@ include 'navigation.php';
                 </div>
             </form>
         </div>
-
+        <div class="campinf">
+            <form action="adminscripts/increaserecognition.php.php">
+                <div>
+                    <button type="submit" ><br>
+                        <h1 style="margin: auto;"> Build Campaign Infrastructure</h1><br>
+                        <img src="img/campaignoffice/mikeoffice" alt="camp image" style="width: 45%; height:auto;" border=".5"><br>
+                        <p>AIncreasing your campaign infrastructure will increase your name recognition in your state. <br>
+                            Campaign offices will distribute signs, and register volunteers to canvas.</p><br>
+                        <p><strong> Costs 5 actions, 0 funding. </strong></p>
+                </div>
+            </form>
+        </div>
         <div class="funding">
             <form action="adminscripts/increasedonor.php">
                 <div>
