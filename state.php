@@ -70,7 +70,7 @@ $uquery = 'SELECT influence, polname, social, economic FROM accounts WHERE polst
 $stmt = $con->prepare($uquery);
 $stmt->bind_param("s", $state);
 $stmt->execute();
-$result = $stmt->bind_result($inf,$polname,$social,$economic);
+$result = $stmt->get_result();
 foreach ($result as $data) {
     print " <tr> ";
 
