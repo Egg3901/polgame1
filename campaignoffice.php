@@ -5,13 +5,15 @@ include 'navigation.php';
 <!DOCTYPE HTML>
 <table>
     <style>
-        .grid-container {
+        .container {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr 1fr;
-            gap: 0px 0px;
-            word-wrap: break-word;
-            grid-template-areas:
+            grid-template-columns: 33% 33% 33%;
+            grid-template-rows: 50% 50%;
+            grid-column-gap: 20px
+            grid-row-gap: 20px
+            justify-items: stretch
+            align-items: stretch
+        }
 
     "-heavy -heavy -heavy"
     "campinf funding ."
