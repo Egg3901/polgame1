@@ -73,14 +73,15 @@ $stmt->execute();
 $result = $stmt->get_result();
 foreach ($result as $row) {
     echo "
-    <p> $row </p>
+    <p> implode($row) </p>
     ";
     $data = $row;
     print " <tr> ";
-
+    $i = $data['polname'];
+    $n = $data['polname'];
     echo " 
-    <td> $data[0]% </td> //influence
-    <td> $data[1] </Td>    //name
+    <td> $i% </td> //influence
+    <td> $n </Td>    //name
 
         ";
     $social = $data[2];
