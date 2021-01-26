@@ -5,6 +5,7 @@ if (!isset($_SESSION['loggedin'])) {
     header('Location: index.html');
     exit;
 }
+print "$id";
 if (is_null($id)) {
     $con = OpenCon(); // opens a connection to the database, this function is from the above included script
     $stmt = $con->prepare('SELECT email, influence, polstate, polname, imgurl, social, economic, action, funding FROM accounts WHERE id = ?');
