@@ -16,8 +16,8 @@ include 'navigation.php';
     ". . .";
         }
         .-heavy { grid-area: -heavy; width: 100%; height:auto;}
-        .campinf { grid-area: campinf; width: 33%; height:auto; }
-        .funding { grid-area: funding; width: 33%; height:auto; }
+        .campinf { grid-area: campinf; width: 31%; height:auto; }
+        .funding { grid-area: funding; width: 31%; height:auto; }
 
     </style>
 
