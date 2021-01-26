@@ -77,7 +77,7 @@ foreach ($result as $row) {
     ";
     $data = $row;
     print " <tr> ";
-    $i = $data['polname'];
+    $i = $data['influence'];
     $n = $data['polname'];
     echo " 
     <td> $i% </td> //influence
