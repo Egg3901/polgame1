@@ -63,7 +63,7 @@ echo "
 ";
 // get the state page data
 $con = OpenCon();
-$uquery = 'SELECT influence, polname, social, economic FROM accounts WHERE polstate = ? ORDER BY influence DESC';
+$uquery = 'SELECT influence, polname, social, economic, id FROM accounts WHERE polstate = ? ORDER BY influence DESC';
 $stmt = $con->prepare($uquery);
 $stmt->bind_param("s", $state);
 $stmt->execute();
@@ -73,9 +73,10 @@ foreach ($result as $row) {
     print " <tr> ";
     $i = $data['influence'];
     $n = $data['polname'];
+    $pid = $data['id'];
     echo " 
     <td> $i% </td> 
-    <td> $n </td>    
+    <td> <a href='profile.php/id=$pid'>$n </td>    
 
         ";
     $social = $data['social'];
