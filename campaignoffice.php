@@ -41,7 +41,7 @@ include 'navigation.php';
 
         <div class="campinf">
             <form action="adminscripts/increaserecognition.php">
-                <div style=" width=20%; height=auto;">
+                <div>
 
                     <button type="submit" ><br>
                         <h1 style="margin: auto;"> Build Campaign Infrastructure</h1><br>
@@ -55,7 +55,7 @@ include 'navigation.php';
 
         <div class="funding">
             <form action="adminscripts/increasedonor.php">
-                <div style=" width=20%; height=auto;">
+                <div>
                     <button type="submit" ><br>
                         <h1 style="margin: auto;"> Appeal To Grassroots Donors</h1><br>
                         <img src="img/campaignoffice/donorbase" alt="donorbase image" style="margin:auto; width: 33%; height:auto;" border=".5"><br>
