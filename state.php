@@ -72,6 +72,9 @@ $stmt->bind_param("s", $state);
 $stmt->execute();
 $result = $stmt->get_result();
 foreach ($result as $row) {
+    echo "
+    <p> $row </p>
+    ";
     $data = $row;
     print " <tr> ";
 
