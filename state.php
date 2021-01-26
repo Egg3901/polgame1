@@ -71,7 +71,8 @@ $stmt = $con->prepare($uquery);
 $stmt->bind_param("s", $state);
 $stmt->execute();
 $result = $stmt->get_result();
-foreach ($result as $data) {
+foreach ($result as $row) {
+    $data = $row;
     print " <tr> ";
 
     echo " 
