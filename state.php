@@ -28,10 +28,7 @@ $stmt->bind_result($gov,$jsen,$ssen);
 $stmt->fetch();
 $stmt->close();
 echo "
-    
-        <br>
-        <div style='margin: auto;'>
-            <table class='blueTable' style='margin: auto; width: 10%'>
+    <table class='blueTable' style='margin: auto; width: 10%'>
                 <tr>
                     <td>
                         <table>
@@ -53,15 +50,14 @@ echo "
                     </td>
                 </tr>
             </table>
-        </div>
-    </div>
-<div class='politicians'>
-    
-        <table class='blueTable'>
-            <th>Name Recognition</th>
-            <th>Politician Name</th>
-            <th>Social Position</th>
-            <th>Economic Position</th>
+        
+            
+  
+    <table class='blueTable'>
+        <th>Name Recognition</th>
+        <th>Politician Name</th>
+        <th>Social Position</th>
+        <th>Economic Position</th>
     
 ";
 // get the state page data
