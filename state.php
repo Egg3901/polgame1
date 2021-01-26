@@ -80,8 +80,8 @@ foreach ($result as $row) {
     $i = $data['influence'];
     $n = $data['polname'];
     echo " 
-    <td> $i% </td> //influence
-    <td> $n </Td>    //name
+    <td> $i% </td> 
+    <td> $n </td>    
 
         ";
     $social = $data[2];
