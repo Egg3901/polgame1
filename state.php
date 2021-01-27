@@ -180,8 +180,8 @@ echo "
                 <h1 style='text-align: center;'>Candidates</h1>
             
             <table border='.5'  class='race' style='margin:auto; width: 40%;'>
-                    <th class='race'>Politician Name</th>
-                    <th class='race'>Name Recognition</th>
+                    <th>Politician Name</th>
+                    <th>Name Recognition</th>
 ";
     $con = OpenCon();
     $uquery = 'SELECT polname, influence FROM accounts WHERE polstate = ? AND rrace = 1 ORDER BY influence DESC';
@@ -222,8 +222,8 @@ echo "
                 <h1 style='text-align: center;'>Candidates</h1>
             
             <table border='.5'  class='race' style='margin:auto; width: 40%;'>
-                    <th class='race'>Politician Name</th>
-                    <th class='race'>Name Recognition</th>";
+                    <th>Politician Name</th>
+                    <th>Name Recognition</th>";
 
 
             $con = OpenCon();
@@ -263,8 +263,8 @@ echo "
                 <h1 style='text-align: center;'>Candidates</h1>
             
             <table border='.5'  class='race' style='margin:auto; width: 40%;'>
-                    <th class='race'>Politician Name</th>
-                    <th class='race'>Name Recognition</th>";
+                    <th>Politician Name</th>
+                    <th>Name Recognition</th>";
 
 
 
