@@ -239,7 +239,7 @@ echo "
                 $recognition = round($row['influence'],2);
                 echo "
                     <td> " . $polname . " </td>
-                    <td> " . $recognition . " </td>
+                    <td> " . $recognition . "% </td>
                 ";
                 print " </tr>";
             }
@@ -248,7 +248,7 @@ echo "
         </table>
         <div style='text-align: center;'>
                 <form  action='adminscripts/joinjsenrace.php' class='race' style='margin: auto; width: 40%'>
-                        <button type='submit' value='Join Race' style='margin: auto; width: 100%'> Join Junior Senate Rce</button>
+                        <button type='submit' value='Join Race' style='margin: auto; width: 100%'> Join Junior Senate Race</button>
                 </form>
         </div>
      </div>
