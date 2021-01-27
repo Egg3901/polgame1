@@ -18,7 +18,7 @@ echo "
         width: 100%;
         text-align: left;
         border-collapse: collapse;
-        width: 45%;
+        
     }
 </style>
     <div class='State-Flag'>
@@ -38,7 +38,7 @@ $stmt->fetch();
 $stmt->close();
 echo "
 </div>
-    <table class='blueTable'>
+    <table style='width: 30%'>
                 <tr>
                     <td>
                         <table>
@@ -64,7 +64,7 @@ echo "
         
             
   
-    <table class='blueTable'>
+    <table style='width: 40%'>
         <th>Name Recognition</th>
         <th>Politician Name</th>
         <th>Social Position</th>
@@ -191,7 +191,7 @@ echo "
             
         </table>
         <div style='text-align: center;'>
-                <form  action='adminscripts/joingovrace.php' class='race' style='margin: auto; width: 10%'>
+                <form  action='adminscripts/joingovrace.php' class='race' style='margin: auto; width: 100%'>
                         <button type='submit' value='Join Race' style='margin: auto; width: 100%'> Join Gubernatorial Race</button>
                 </form>
         </div>
