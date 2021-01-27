@@ -11,10 +11,8 @@ $imgsource = "img/states/{$statef}";
 $con = OpenCon();
 $uquery = 'SELECT governor, jsen, ssen, population, regionalflair, govtime FROM states WHERE name = ?';
 $stmt = $con->prepare($uquery);
-print"
-        <p> $statef </p>
-";
-$stmt->bind_param("s", $statef);
+
+$stmt->bind_param("s", $state);
 $stmt->execute();
 $stmt->bind_result($gov,$jsen,$ssen, $pop, $regionalflair, $govtime);
 $stmt->fetch();
@@ -181,8 +179,49 @@ echo "
             
             <table border='.5'  class='race' style='margin:auto; width: 40%;'>
                     <th class='race'>Politician Name</th>
+                    <th class='race'>Name Recognition</th>
+<div class='jsen'>
+     <div>
+        <h1 style='text-align: center;'> Junior Senator Election</h1>
+        
+        <table class='race' style='text-align; auto;'>
+            
+                <h1 style='text-align: center;'>Candidates</h1>
+            
+            <table border='.5'  class='race' style='margin:auto; width: 40%;'>
+                    <th class='race'>Politician Name</th>
                     <th class='race'>Name Recognition</th>";
 
+
+            $con = OpenCon();
+            $uquery = 'SELECT polname, influence FROM accounts WHERE polstate = ? AND rrace = 1  ORDER BY influence DESC';
+            $stmt = $con->prepare($uquery);
+            $stmt->bind_param("s", $state);
+            $stmt->execute();
+            $result = $stmt->get_result();
+
+            foreach ($result as $row) {
+                print " <tr> ";
+                $polname = $row[0];
+                $recognition = round($row[1],2);
+                echo "
+                    <td> " . $polname . " </td>
+                    <td> " . $recognition . " </td>
+                ";
+                print " </tr>";
+            }
+            echo "
+            
+        </table>
+        <div style='text-align: center;'>
+                <form  action='adminscripts/joinjsen.php' class='race' style='margin: auto; width: 40%'>
+                        <button type='submit' value='Join Race' style='margin: auto; width: 100%'> Join Gubernatorial Race</button>
+                </form>
+        </div>
+     </div>
+    </div>
+</div>
+";
 
             $con = OpenCon();
             $uquery = 'SELECT polname, influence FROM accounts WHERE polstate = ? AND rrace = 1  ORDER BY influence DESC';
