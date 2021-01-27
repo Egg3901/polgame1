@@ -14,7 +14,7 @@ $stmt = $con->prepare($uquery);
 print"
         <p> $statef </p>
 ";
-$stmt->bind_param("s", $statef);
+$stmt->bind_param("s", $state);
 $stmt->execute();
 $stmt->bind_result($gov,$jsen,$ssen, $pop, $regionalflair, $govtime);
 $stmt->fetch();
