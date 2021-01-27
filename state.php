@@ -13,7 +13,7 @@ echo "
 <style>
     table {
         margin: auto;
-        border: 1px solid #248DD3;
+        border: 1px solid black;
         background-color: #EEEEEE;
         width: 100%;
         text-align: left;
