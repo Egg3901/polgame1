@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/ahousedi/public_html/ahd/
-    - /bin/cp -r  ahd $DEPLOYPATH
+    - /bin/cp -R * $DEPLOYPATH
