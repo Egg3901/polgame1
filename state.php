@@ -191,7 +191,7 @@ echo "
             
         </table>
         <div style='text-align: center;'>
-                <form  action='adminscripts/joingovrace.php' class='race' style='margin: auto; width: 100%'>
+                <form  action='adminscripts/joingovrace.php' class='race' style='margin: auto; width: 40%'>
                         <button type='submit' value='Join Race' style='margin: auto; width: 100%'> Join Gubernatorial Race</button>
                 </form>
         </div>
