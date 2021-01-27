@@ -80,7 +80,7 @@ $result = $stmt->get_result();
 foreach ($result as $row) {
     $data = $row;
     print " <tr> ";
-    $i = $data['influence'];
+    $i = round($data['influence'],2);
     $n = $data['polname'];
     $pid = $data['id'];
     echo " 
