@@ -38,6 +38,9 @@ echo "
         <h1 style='text-align: center; font-size: 40px;'>The " . $regionalflair . " of   " . $state . "   </h1>
         <br>
         <img style='width: 30%; height: auto; border: 2px solid black; display: block; margin: auto;' src=$imgsource alt='state image'>
+        <br>
+        <hr>
+        <br>
 "
 
 ;
