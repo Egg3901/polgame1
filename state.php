@@ -181,7 +181,37 @@ echo "
             
             <table border='.5'  class='race' style='margin:auto; width: 40%;'>
                     <th class='race'>Politician Name</th>
-                    <th class='race'>Name Recognition</th>
+                    <th class='race'>Name Recognition</th>$con = OpenCon();
+                    ";
+    $uquery = 'SELECT polname, influence FROM accounts WHERE polstate = ? AND rrace = 3 ORDER BY influence DESC';
+    $stmt = $con->prepare($uquery);
+    $stmt->bind_param("s", $state);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    foreach ($result as $row) {
+        print " <tr> ";
+        $polname = $row[0];
+        $recognition = round($row[1],2);
+        echo "
+                        <td> " . $polname . " </td>
+                        <td> " . $recognition .  "% </td>
+                    ";
+        print " </tr>";
+    }
+    echo "
+                
+            </table>
+            <div style='text-align: center;'>
+                    <form  action='adminscripts/joingovrace.php' class='race' style='margin: auto; width: 40%'>
+                            <button type='submit' value='Join Race' style='margin: auto; width: 100%'> Join Senior Senate Race</button>
+                    </form>
+            </div>
+         </div>
+        </div>
+    </div>
+    ";
+    echo "
 <div class='jsen'>
      <div>
         <h1 style='text-align: center;'> Junior Senator Election</h1>
@@ -216,7 +246,7 @@ echo "
             
         </table>
         <div style='text-align: center;'>
-                <form  action='adminscripts/joinjsen.php' class='race' style='margin: auto; width: 40%'>
+                <form  action='adminscripts/joinjsenrace.php' class='race' style='margin: auto; width: 40%'>
                         <button type='submit' value='Join Race' style='margin: auto; width: 100%'> Join Junior Senate Rce</button>
                 </form>
         </div>
