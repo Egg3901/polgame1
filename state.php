@@ -8,7 +8,14 @@ ini_set('display_errors', 'on');
 $statef =urlencode( $_GET['state']);
 $state = str_replace('+', ' ', $statef);
 $imgsource = "img/states/{$statef}";
-
+$con = OpenCon();
+$uquery = 'SELECT governor, jsen, ssen, population, regionalflair, govtime FROM states WHERE name = ?';
+$stmt = $con->prepare($uquery);
+$stmt->bind_param("s", $statef);
+$stmt->execute();
+$stmt->bind_result($gov,$jsen,$ssen, $pop, $regionalflair, $govtime);
+$stmt->fetch();
+$stmt->close();
 echo "
 <style>
     table {
@@ -25,20 +32,13 @@ echo "
     }
 </style>
     <div class='State-Flag'>
-        <h1 style='text-align: center; font-size: 40px;'>The State of   " . $state . "   </h1>
+        <h1 style='text-align: center; font-size: 40px;'>The " . $regionalflair . " of   " . $state . "   </h1>
         <br>
         <img style='width: 30%; height: auto; border: 2px solid black; display: block; margin: auto;' src=$imgsource alt='state image'>
 "
 
 ;
-$con = OpenCon();
-$uquery = 'SELECT governor, jsen, ssen FROM states WHERE name = ?';
-$stmt = $con->prepare($uquery);
-$stmt->bind_param("s", $statef);
-$stmt->execute();
-$stmt->bind_result($gov,$jsen,$ssen);
-$stmt->fetch();
-$stmt->close();
+
 echo "
 </div>
     <table style='width: 30%'>
