@@ -20,6 +20,9 @@ echo "
         border-collapse: collapse;
         
     }
+    td {
+    border: 1px solid black;
+    }
 </style>
     <div class='State-Flag'>
         <h1 style='text-align: center; font-size: 40px;'>The State of   " . $state . "   </h1>
