@@ -217,7 +217,7 @@ echo "
         </table>
         <div style='text-align: center;'>
                 <form  action='adminscripts/joinjsen.php' class='race' style='margin: auto; width: 40%'>
-                        <button type='submit' value='Join Race' style='margin: auto; width: 100%'> Join Gubernatorial Race</button>
+                        <button type='submit' value='Join Race' style='margin: auto; width: 100%'> Join Junior Senate Rce</button>
                 </form>
         </div>
      </div>
@@ -234,6 +234,7 @@ echo "
             <table border='.5'  class='race' style='margin:auto; width: 40%;'>
                     <th class='race'>Politician Name</th>
                     <th class='race'>Name Recognition</th>";
+
 
 
 $con = OpenCon();
@@ -258,7 +259,7 @@ echo "
         </table>
         <div style='text-align: center;'>
                 <form  action='adminscripts/joinssen.php' class='race' style='margin: auto; width: 40%'>
-                        <button type='submit' value='Join Race' style='margin: auto; width: 100%'> Join Gubernatorial Race</button>
+                        <button type='submit' value='Join Race' style='margin: auto; width: 100%'> Join Senior Senate Race</button>
                 </form>
         </div>
      </div>
@@ -266,34 +267,9 @@ echo "
 </div>
 ";
 
-            $con = OpenCon();
-            $uquery = 'SELECT polname, influence FROM accounts WHERE polstate = ? AND rrace = 1  ORDER BY influence DESC';
-            $stmt = $con->prepare($uquery);
-            $stmt->bind_param("s", $state);
-            $stmt->execute();
-            $result = $stmt->get_result();
 
-            foreach ($result as $row) {
-                print " <tr> ";
-                $iter = 0;
-                foreach ($row as $polname => $data) {
-                    print " <td> $data </Td>";
-                }
-                print " </tr>";
-            }
-            echo "
-            
-        </table>
-        <div style='text-align: center;'>
-                <form  action='adminscripts/joingovrace.php' class='race' style='margin: auto; width: 40%'>
-                        <button type='submit' value='Join Race' style='margin: auto; width: 100%'> Join Gubernatorial Race</button>
-                </form>
-        </div>
-     </div>
-    </div>
-</div>
                 
-";
+
 
 
 
