@@ -289,7 +289,7 @@ echo "
             
         </table>
         <div style='text-align: center;'>
-                <form  action='adminscripts/joinssen.php' class='race' style='margin: auto; width: 40%'>
+                <form  action='adminscripts/joinssenrace.php' class='race' style='margin: auto; width: 40%'>
                         <button type='submit' value='Join Race' style='margin: auto; width: 100%'> Join Senior Senate Race</button>
                 </form>
         </div>
