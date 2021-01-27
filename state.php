@@ -21,7 +21,7 @@ echo "
         
     }
     td {
-    border: 1px solid black;
+    border: 1px solid dimgrey;
     }
 </style>
     <div class='State-Flag'>
