@@ -181,8 +181,9 @@ echo "
             
             <table border='.5'  class='race' style='margin:auto; width: 40%;'>
                     <th class='race'>Politician Name</th>
-                    <th class='race'>Name Recognition</th>$con = OpenCon();
-                    ";
+                    <th class='race'>Name Recognition</th>
+";
+    $con = OpenCon();
     $uquery = 'SELECT polname, influence FROM accounts WHERE polstate = ? AND rrace = 3 ORDER BY influence DESC';
     $stmt = $con->prepare($uquery);
     $stmt->bind_param("s", $state);
