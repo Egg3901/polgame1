@@ -192,8 +192,8 @@ echo "
 
     foreach ($result as $row) {
         print " <tr> ";
-        $polname = $row[0];
-        $recognition = round($row[1],2);
+        $polname = $row['polname'];
+        $recognition = round($row['influence'],2);
         echo "
                         <td> " . $polname . " </td>
                         <td> " . $recognition .  "% </td>
@@ -235,8 +235,8 @@ echo "
 
             foreach ($result as $row) {
                 print " <tr> ";
-                $polname = $row[0];
-                $recognition = round($row[1],2);
+                $polname = $row['polname'];
+                $recognition = round($row['influence'],2);
                 echo "
                     <td> " . $polname . " </td>
                     <td> " . $recognition . " </td>
@@ -277,8 +277,8 @@ $result = $stmt->get_result();
 
 foreach ($result as $row) {
     print " <tr> ";
-    $polname = $row[0];
-    $recognition = round($row[1],2);
+    $polname = $row['polname'];
+    $recognition = round($row['influence'],2);
     echo "
                     <td> " . $polname . " </td>
                     <td> " . $recognition . " </td>
