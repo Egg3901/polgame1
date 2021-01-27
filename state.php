@@ -10,7 +10,16 @@ $state = str_replace('+', ' ', $statef);
 $imgsource = "img/states/{$statef}";
 
 echo "
-
+<style>
+    table {
+        margin: auto;
+        border: 1px solid #248DD3;
+        background-color: #EEEEEE;
+        width: 100%;
+        text-align: left;
+        border-collapse: collapse;
+    }
+</style>
     <div class='State-Flag'>
         <h1 style='text-align: center; font-size: 40px;'>The State of   " . $state . "   </h1>
         <br>

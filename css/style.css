@@ -27,6 +27,15 @@
     margin: auto;
     text-align: center;
 }
+.fullCard {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 5px;
+    padding: 4px;
+}
+.cardContent {
+    padding: 10px;
+}
 body table.blueTable {
     border: 1px solid #248DD3;
     background-color: #EEEEEE;
