@@ -11,6 +11,9 @@ $imgsource = "img/states/{$statef}";
 $con = OpenCon();
 $uquery = 'SELECT governor, jsen, ssen, population, regionalflair, govtime FROM states WHERE name = ?';
 $stmt = $con->prepare($uquery);
+print"
+        <p> $statef </p>
+";
 $stmt->bind_param("s", $statef);
 $stmt->execute();
 $stmt->bind_result($gov,$jsen,$ssen, $pop, $regionalflair, $govtime);
