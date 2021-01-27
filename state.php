@@ -18,6 +18,7 @@ echo "
         width: 100%;
         text-align: left;
         border-collapse: collapse;
+        width: 45%;
     }
 </style>
     <div class='State-Flag'>
