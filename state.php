@@ -178,7 +178,7 @@ echo "
         <table class='race' style='text-align; auto;'>
             
                 <h1 style='text-align: center;'>Candidates</h1>
-            
+                <p style='text-align: center;'> Election in ".  $govtime . " hours </p>
             <table border='.5'  class='race' style='margin:auto; width: 40%;'>
                     <th>Politician Name</th>
                     <th>Name Recognition</th>
