@@ -36,10 +36,12 @@ echo "
     td {
         border: 1px solid dimgrey;
     }
-    .statepoliticians, .statepoliticans td {
+    .statepoliticians {
         border: 0px;
-        font-weight: bold;
-        
+        font-weight: bold;  
+    }
+    .statepoliticians {
+        border: 0px;
     }
 </style>
     <div class='State-Flag'>
