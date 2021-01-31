@@ -21,21 +21,6 @@ $stmt->fetch();
 $stmt->close();
 echo "
 <style>
-    table {
-        margin: auto;
-        border: 1px solid black;
-        background-color: #EEEEEE;
-        width: 100%;
-        text-align: left;
-        border-collapse: collapse;
-        border-collapse:separate;
-        border:solid black 1px;
-        border-radius:6px;
-        -moz-border-radius:6px;
-    }
-    td {
-        border: 1px solid dimgrey;
-    }
     .statepoliticians {
         border: 0px;
         font-weight: bold;  
