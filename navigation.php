@@ -21,9 +21,9 @@ $stmt->close();
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
 </head>
-<body class="loggedin">
+<body class="mainbody">
 <nav class="navtop">
-    <div>
+    <div class="container">
         <h1>A House Divided (WIP)</h1>
         <a href="profile.php"><i class="fas fa-user-circle"></i><?php echo $polname ?></a>
         <a href="campaignoffice.php"><i class="fas fa-briefcase"></i> Campaign Office</a>
