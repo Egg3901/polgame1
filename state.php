@@ -36,7 +36,7 @@ echo "
     td {
         border: 1px solid dimgrey;
     }
-    .statepoliticians {
+    .statepoliticians, .statepoliticans td {
         border: 0px;
         font-weight: bold;
         
