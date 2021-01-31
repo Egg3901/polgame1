@@ -1,11 +1,9 @@
-h1 {
-    font-size: 20em;
-}
+
 body {
     background-attachment: fixed;
 }
 .container:before {
-    content: '';
+    content: '../img/background/nav.jpg';
     position: absolute;
     top: 0;
     left: 0;
