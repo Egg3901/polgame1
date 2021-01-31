@@ -34,7 +34,12 @@ echo "
         -moz-border-radius:6px;
     }
     td {
-    border: 1px solid dimgrey;
+        border: 1px solid dimgrey;
+    }
+    .statepoliticians {
+        border: 0px;
+        font-weight: bold;
+        
     }
 </style>
     <div class='State-Flag'>
@@ -53,19 +58,19 @@ echo "
     <table style='width: 30%'>
                 <tr>
                     <td>
-                        <table>
+                        <table class='statepoliticians' id='gov'>
                                 <tr> <td style='text-align: center;'>Governor</td></tr>
                                 <tr> <td style='text-align: center;'>Governor " . $gov . "</td> </tr>
                         </table>
                     </td>
                     <td>
-                        <table>
+                        <table class='statepoliticians' id='jsen'>
                                 <tr> <td style='text-align: center;'>Junior Senator</td></tr>
                                 <tr> <td style='text-align: center;'>None</td> </tr>
                         </table>
                     </td>
                     <td>
-                        <table>
+                        <table class='statepoliticians' id='ssen'>
                                 <tr> <td style='text-align: center;'>Senior Senator</td></tr>
                                 <tr> <td style='text-align: center;'>None</td> </tr>
                         </table>
