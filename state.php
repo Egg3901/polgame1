@@ -21,6 +21,21 @@ $stmt->fetch();
 $stmt->close();
 echo "
 <style>
+    .infotable {
+        margin: auto;
+        border: 1px solid black;
+        background-color: #EEEEEE;
+        width: 100%;
+        text-align: left;
+        border-collapse: collapse;
+        border-collapse:separate;
+        border:solid black 1px;
+        border-radius:6px;
+        -moz-border-radius:6px;
+    }
+    td {
+        border: 1px solid dimgrey;
+    }
     .statepoliticians {
         border: 0px;
         font-weight: bold;  
@@ -68,7 +83,7 @@ echo "
         
             
   
-    <table style='width: 40%'>
+    <table class='infotable' style='width: 40%'>
         <th>Name Recognition</th>
         <th>Politician Name</th>
         <th>Social Position</th>
@@ -167,7 +182,7 @@ echo "
      <div>
         <h1 style='text-align: center;'> Gubernatorial Election</h1>
         
-        <table class='race' style='text-align; auto;'>
+        <table class='infotable' style='text-align; auto;'>
             
                 <h1 style='text-align: center;'>Candidates</h1>
                 <p style='text-align: center;'> Election in ".  $govtime . " hours </p>
