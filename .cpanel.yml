@@ -3,4 +3,4 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/ahousedi/public_html/ahd/
     - /bin/cp -R * $DEPLOYPATH
-    - /bin/cp style.css $DEPLOYPATH
+    - /bin/cp css/style.css $DEPLOYPATH
