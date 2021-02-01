@@ -18,9 +18,10 @@ body {
 }
 .profile-image {
     width: 30%;
-    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     border: 2px solid black;
-    margin:auto;
 }
 .info-table {
     padding: 2%;
