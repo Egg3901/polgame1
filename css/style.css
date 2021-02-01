@@ -1,14 +1,3 @@
-h2 {
-    font-size: 5em;
-}
-body {
-    background-attachment: fixed;
-}
-head {
-    background-color: darkslategray;
-}
-.main-title-header {
-    background-image: linear-gradient(45deg, darkred,dodgerblue);
-    font-family: Tahoma;
-    font-weight: bold;
+.head {
+    background-color: red;
 }
