@@ -27,11 +27,11 @@ else {
 ?>
 
 
-<div class="content">
-    <h2><?=$polname?></h2>
-    <div>
-        <h1></h1>
-        <table>
+<div>
+    <div class="profile-container">
+        <h2 id="politician-name"> <?=$polname?> </h2>
+        <br>
+        <table id="politician-table" class="info-table">
             <img class="profile-image" src="<?=$imgurl?>">
             <tr>
                 <td>Recognition:</td>
