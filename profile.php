@@ -135,6 +135,7 @@ else {
         }
         else if (is_null($id)){ //this checks if the user is trying to load their own page
             echo"
+            <br>
             <table class='info-table' id='account-details'>
                 <tr>
                     <td colspan='2'><i>Your account details are below (Only Visible to you):</i></td>
