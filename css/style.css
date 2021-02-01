@@ -14,7 +14,7 @@ body {
 
 }
 .main-title-container {
-    background-color: lightslategrey;
+    background: lightslategrey;
     height: 5%;
     width: 100%;
 }
@@ -31,6 +31,7 @@ body {
     border: 1px solid black;
     width: 60%;
     margin:auto;
+    background:white;
 }
 .info-table td {
     border: 1px solid black;
@@ -41,6 +42,7 @@ body {
     margin:auto;
     width: 50%;
     height: auto;
+    background: white;
 }
 
 #politician-name {
