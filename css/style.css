@@ -3,7 +3,11 @@
     font-weight: bold;
     text-align: center;
     color: antiquewhite;
+
+
 }
 .main-title-container {
     background-color: lightslategrey;
+    height: 5%;
+    width: 100%
 }
