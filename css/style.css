@@ -1,3 +1,5 @@
-head {
-    background-color: red;
+.main-title-header {
+    font-family: Tahoma;
+    font-weight: bold;
+    text-align: center;
 }
