@@ -20,6 +20,8 @@ body {
 }
 .main-container {
     background: lightslategrey;
+    width: 90%
+    opacity: 90%;
 }
 .profile-image {
     width: 30%;
