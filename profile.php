@@ -132,11 +132,11 @@ else {
         if (isset($id)) {
 
         }
-        else if (is_null($id)){
+        else if (is_null($id)){ //this checks if the user is trying to load their own page
             echo"
-            <table class='info-table'>
+            <table class='info-table' id='account-details'>
                 <tr>
-                    <td></td><p><i>Your account details are below (Only Visible to you):</i></p></td>
+                    <td><i>Your account details are below (Only Visible to you):</i></td>
                 </tr>
                 <tr>
                     <td>Username:</td>
