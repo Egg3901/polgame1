@@ -33,6 +33,7 @@ else {
         <br>
         <table id="politician-table" class="info-table">
             <img class="profile-image" src="<?=$imgurl?>">
+            <br>
             <tr>
                 <td>Recognition:</td>
                 <td><?=$influence?>%</td>
