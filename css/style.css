@@ -18,6 +18,9 @@ body {
     height: 5%;
     width: 100%;
 }
+.main-container {
+    background: lightslategrey;
+}
 .profile-image {
     width: 30%;
     display: block;
