@@ -2,4 +2,8 @@
     font-family: Tahoma;
     font-weight: bold;
     text-align: center;
+    color: antiquewhite;
+}
+.main-title-container {
+    background-color: lightslategrey;
 }
