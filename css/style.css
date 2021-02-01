@@ -20,11 +20,13 @@ body {
     width: 60%;
     height: auto;
     border: 2px solid black;
+    margin:auto;
 }
 .info-table {
     padding: 2%;
     border: 1px solid black;
     width: 60%;
+    margin:auto;
 }
 .profile-container {
     margin:auto;
@@ -34,4 +36,5 @@ body {
 
 #politician-name {
     text-align: center;
+    margin:auto;
 }
