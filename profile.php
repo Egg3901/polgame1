@@ -134,7 +134,7 @@ else {
         }
         else if (is_null($id)){
             echo"
-            <table>
+            <table class='info-table'>
                 <tr>
                     <p><i>Your account details are below (Only Visible to you):<i></i></p>
                 </tr>

@@ -29,6 +29,11 @@ body {
     width: 60%;
     margin:auto;
 }
+.info-table td {
+    border: 1px solid black;
+    text-align: left;
+}
+
 .profile-container {
     margin:auto;
     width: 50%;
