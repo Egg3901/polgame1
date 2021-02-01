@@ -24,7 +24,7 @@ $stmt->close();
 <body class="mainbody">
 <nav class="navtop">
     <div class="container">
-        <h1>A House Divided (WIP)</h1>
+        <h1 id="main-title-header" class="main-title-header">A House Divided</h1>
         <a href="profile.php"><i class="fas fa-user-circle"></i><?php echo $polname ?></a>
         <a href="campaignoffice.php"><i class="fas fa-briefcase"></i> Campaign Office</a>
         <a href="state.php?state=<?=$polstate?>"><i class="fas fa-flag-usa"></i><?=$polstate?></a>

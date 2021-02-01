@@ -4,16 +4,8 @@ h2 {
 body {
     background-attachment: fixed;
 }
-.container:before {
-    content: '../img/background/nav.jpg';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
-    filter: blur(10px);
-}
-.container {
-    background: inherit;
+.main-title-header {
+    background-color: darkslategray;
+    font-family: Tahoma;
+    font-weight: bold;
 }
