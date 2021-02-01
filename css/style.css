@@ -24,7 +24,7 @@ body {
     border: 2px solid black;
 }
 .info-table {
-    padding: 2%;
+    padding-top: 1em;
     border: 1px solid black;
     width: 60%;
     margin:auto;
