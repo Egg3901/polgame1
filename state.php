@@ -36,7 +36,7 @@ echo "
 
 echo "
 </div>
-    <table style='width: 30%'>
+    <table class='info-table' style='width: 30%'>
                 <tr>
                     <td>
                         <table class='statepoliticians' id='gov'>
