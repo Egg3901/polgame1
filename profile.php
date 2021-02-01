@@ -136,7 +136,7 @@ else {
             echo"
             <table class='info-table' id='account-details'>
                 <tr>
-                    <td><i>Your account details are below (Only Visible to you):</i></td>
+                    <td colspan='2'><i>Your account details are below (Only Visible to you):</i></td>
                 </tr>
                 <tr>
                     <td>Username:</td>
