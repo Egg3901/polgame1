@@ -32,7 +32,7 @@ else {
     <div>
         <h1></h1>
         <table>
-            <img src="<?=$imgurl?>">
+            <img class="profile-image" src="<?=$imgurl?>">
             <tr>
                 <td>Recognition:</td>
                 <td><?=$influence?>%</td>
