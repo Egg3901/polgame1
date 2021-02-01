@@ -16,7 +16,7 @@ $stmt->close();
 ?>
 <head>
     <meta charset="utf-8">
-    <title>AHD - <?=$polname?></title>
+    <title class="main-title-header">AHD - <?=$polname?></title>
     <link href="/css/style.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
