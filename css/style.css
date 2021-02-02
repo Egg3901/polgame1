@@ -46,13 +46,13 @@ body {
     text-align: left;
 }
 
-.profile-container {
+.main-sub-container {
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 10px;
     padding-right: 10px;
     margin:auto;
-    width: 50%;
+    width: 60%;
     height: auto;
     background: white;
 }
