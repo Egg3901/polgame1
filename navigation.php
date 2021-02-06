@@ -27,7 +27,7 @@ $stmt->close();
     <div class="navgrid">
 
         <div><a href="profile.php"><i class="fas fa-user-circle"></i><?php echo $polname ?></a></div>
-
+        <div><a href="parties.php"><i class="fas fa-democrat"></i> Parties</a></div>
         <div><a href="campaignoffice.php"><i class="fas fa-briefcase"></i> Campaign Office</a></div>
         <div><a href="state.php?state=<?=$polstate?>"><i class="fas fa-flag-usa"></i><?=$polstate?></a></div>
         <div><a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a></div>
