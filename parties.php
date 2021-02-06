@@ -9,7 +9,8 @@ $party =urlencode( $_GET['party']);
 if (is_null($party)) {
     echo "
     <div class='main-container'>
-    "
+    ";
+
     $con = OpenCon();
     $uquery = 'SELECT partyname FROM parties';
     $stmt = $con->prepare($uquery);
@@ -23,7 +24,6 @@ if (is_null($party)) {
             <p>" . $row['partyname'] . "</p>
         </div>
         ";
-    ?>
-    ";
-
+    }
 }
+
