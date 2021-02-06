@@ -9,6 +9,9 @@ body {
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-columns: 100%;
 }
+.navtop div {
+    display: grid;
+}
 
 .main-title-header {
     font-family: Tahoma;
