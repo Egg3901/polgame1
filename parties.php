@@ -4,7 +4,12 @@ include 'navigation.php';
 error_reporting(E_ALL);
 ini_set('display_errors', 'on');
 
-$party =urlencode( $_GET['party']);
+try {
+    $party =urlencode( $_GET['party']);
+}catch(Exceptions $e) {
+    $party = NULL;
+}
+
 
 if (is_null($party)) {
     echo "
