@@ -24,7 +24,7 @@ $stmt->close();
 <body>
 <nav class="navtop">
     <h1 id="main-title-header" class="main-title-header">A House Divided</h1>
-    <div class="navtop">
+    <div class="navgrid">
 
         <div><a href="profile.php"><i class="fas fa-user-circle"></i><?php echo $polname ?></a></div>
 
