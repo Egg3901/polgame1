@@ -11,6 +11,7 @@ body {
 
 .navgrid a {
     float: left;
+    display: block;
     padding-left: 3%;
     padding-right: 3%;
 }
