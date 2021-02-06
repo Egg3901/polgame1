@@ -21,6 +21,8 @@ body {
     width: 100%;
 }
 .main-container {
+    display: grid;
+    grid-template-columns: 25% 25% 25%;
     background: lightslategrey;
     width: 90%
     opacity: .6;
