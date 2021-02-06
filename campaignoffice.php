@@ -7,10 +7,7 @@ include 'navigation.php';
     <style>
         .container {
             display: grid;
-            grid-template-columns: 33% 33% 33%;
-            grid-template-rows: 50% 50%;
-            grid-column-gap: 20px
-            grid-row-gap: 20px
+            grid-template-columns: 30% 30% 30%;
             justify-items: stretch
             align-items: stretch
         }
