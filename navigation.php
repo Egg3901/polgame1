@@ -23,11 +23,13 @@ $stmt->close();
 </head>
 <body>
 <nav class="navtop">
+    <h1 id="main-title-header" class="main-title-header">A House Divided</h1>
     <div class="container">
-        <h1 id="main-title-header" class="main-title-header">A House Divided</h1>
-        <a href="profile.php"><i class="fas fa-user-circle"></i><?php echo $polname ?></a>
-        <a href="campaignoffice.php"><i class="fas fa-briefcase"></i> Campaign Office</a>
-        <a href="state.php?state=<?=$polstate?>"><i class="fas fa-flag-usa"></i><?=$polstate?></a>
-        <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
+
+        <div><a href="profile.php"><i class="fas fa-user-circle"></i><?php echo $polname ?></a></div>
+
+        <div><a href="campaignoffice.php"><i class="fas fa-briefcase"></i> Campaign Office</a></div>
+        <div><a href="state.php?state=<?=$polstate?>"><i class="fas fa-flag-usa"></i><?=$polstate?></a></div>
+        <div><a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a></div>
     </div>
 </nav>
