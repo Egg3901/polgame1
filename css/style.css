@@ -8,9 +8,9 @@ body {
     display: grid;
 
 }
-.navgrid {
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-columns: 100%;
+
+.navgrid a {
+    float: left;
 }
 
 
