@@ -267,7 +267,7 @@ foreach ($result as $row) {
     $recognition = round($row['influence'],2);
     echo "
                     <td> " . $polname . " </td>
-                    <td> " . $recognition . "% </td>
+                    <td> " . $recognition . " </td>
                 ";
     print " </tr>";
 }
