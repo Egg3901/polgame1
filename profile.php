@@ -129,34 +129,7 @@ else {
                 </td>
             </tr>  <!--- economic position formatting ---->
         </table>
-        <?php
-        if (isset($id)) {
-
-        }
-        else if (is_null($id)){ //this checks if the user is trying to load their own page
-            echo"
-            <br>
-            <table class='info-table' id='account-details'>
-                <tr>
-                    <td colspan='2'><i>Your account details are below (Only Visible to you):</i></td>
-                </tr>
-                <tr>
-                    <td>Username:</td>
-                    <td>" . $_SESSION['name'] . "</td>
-                </tr>
-
-                <tr>
-                    <td>Email:</td>
-                    <td>" . $email . "</td>
-                </tr>
-
-        </table>";
-        }
-        else {
-            header("Location: index.html");
-        }
-
-        ?>
+        
     </div>
 </div>
 </body>
