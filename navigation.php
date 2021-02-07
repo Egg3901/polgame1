@@ -33,3 +33,4 @@ $stmt->close();
         <div><a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a></div>
     </div>
 </nav>
+<br>
