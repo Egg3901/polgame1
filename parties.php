@@ -24,7 +24,7 @@ if (is_null($party)) {
     $result = $stmt->get_result();
     foreach ($result as $row) {
         $data = $row;
-        id = $row['id'];
+        $id = $row['id'];
         $partyurl = "parties.php?party={$id}";
         echo "
         <div>
