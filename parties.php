@@ -18,8 +18,31 @@ if (is_null($party)) {
     ";
 
     $con = OpenCon();
-    $uquery = 'SELECT partyname, partybio, id FROM parties';
-    $stmt = $con->prepare($uquery);
+    $query = 'SELECT partyname, partybio, id FROM parties';
+    $stmt = $con->prepare($query);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    foreach ($result as $row) {
+        $data = $row;
+        $id = $row['id'];
+        $partyurl = "parties.php?party={$id}";
+        echo "
+        <div>
+            <h1 id='party-name'><a href=$partyurl> " . $row['partyname'] . " </h1>
+            <p id='party-bio'>" . $row['partybio'] . "</p>
+        </div>
+        ";
+    }
+}
+else {
+    echo "
+    <div class='main-container' id='profile container'>
+    ";
+    $partyid = $party;
+    $con = OpenCon();
+    $query = 'SELECT partyname, partybio, id FROM parties WHERE id = ?';
+    $stmt = $con->prepare($query);
+    $stmt = $con->bind_param($partyid);
     $stmt->execute();
     $result = $stmt->get_result();
     foreach ($result as $row) {
