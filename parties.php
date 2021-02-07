@@ -47,7 +47,7 @@ else {
     foreach ($result as $row) {
         $data = $row;
         echo "
-        <div>
+        <div id='party-container'>
             <h1 id='party-name'> " . $row['partyname'] . " </h1>
             <p id='party-bio'>" . $row['partybio'] . "</p>
         </div>
