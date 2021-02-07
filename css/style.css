@@ -33,6 +33,7 @@ body {
 }
 .main-container {
     display: grid;
+    margin: auto;
     grid-template-columns: 25% 25% 25%;
     background: floralwhite;
     width: 70%;
