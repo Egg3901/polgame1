@@ -86,7 +86,8 @@ body {
     margin:auto;
 }
 #party-container {
-    margin: auto;
+    margin-left: -50%;
+    margin-right: -50%;
     background-color: floralwhite;
     opacity: 1;
     text-align: center;
