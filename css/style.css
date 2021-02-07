@@ -43,7 +43,7 @@ body {
     grid-template-columns: 25% 25% 25%;
 }
 #profile-main-container {
-    grid-template-columns: 100%;
+    grid-template-columns: 70%;
 }
 .profile-image {
     width: 30%;
