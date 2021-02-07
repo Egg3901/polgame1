@@ -129,7 +129,7 @@ else {
                 </td>
             </tr>  <!--- economic position formatting ---->
         </table>
-        
+
     </div>
 </div>
 </body>
