@@ -71,15 +71,3 @@ body {
     text-align: center;
     margin:auto;
 }
-
-#party-name {
-    margin: auto;
-    text-align: center;
-    font-family: "Century Gothic";
-    font-weight: bold;
-}
-#party-bio {
-    margin:auto;
-    text-align: left;
-    font-family: "Century Gothic";
-}
