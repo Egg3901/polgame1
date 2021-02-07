@@ -27,7 +27,7 @@ if (is_null($party)) {
         echo "
         <div>
             <h1 id='party-name'>" . $row['partyname'] . " </h1>
-            <p>" . $row['partybio'] . "</p>
+            <p id='party-bio'>" . $row['partybio'] . "</p>
         </div>
         ";
     }
