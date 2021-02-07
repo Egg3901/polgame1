@@ -38,20 +38,19 @@ else {
     echo "
     <div class='main-container' id='profile container'>
     ";
-    $partyid = $party;
     $con = OpenCon();
-    $query = 'SELECT partyname, partybio, id FROM parties WHERE id = ?';
+    $query = 'SELECT partyname, partybio FROM parties WHERE id = ?';
     $stmt = $con->prepare($query);
-    $stmt->bind_param($partyid);
+    $stmt->bind_param($party);
     $stmt->execute();
     $result = $stmt->get_result();
     foreach ($result as $row) {
         $data = $row;
         $id = $row['id'];
-        $partyurl = "parties.php?party={$id}";
+
         echo "
         <div>
-            <h1 id='party-name'><a href=$partyurl> " . $row['partyname'] . " </h1>
+            <h1 id='party-name'> " . $row['partyname'] . " </h1>
             <p id='party-bio'>" . $row['partybio'] . "</p>
         </div>
         ";
