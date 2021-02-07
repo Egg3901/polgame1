@@ -18,7 +18,7 @@ if (is_null($party)) {
     ";
 
     $con = OpenCon();
-    $uquery = 'SELECT partyname FROM parties';
+    $uquery = 'SELECT partyname, partybio FROM parties';
     $stmt = $con->prepare($uquery);
     $stmt->execute();
     $result = $stmt->get_result();
