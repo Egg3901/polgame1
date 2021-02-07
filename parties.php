@@ -18,15 +18,17 @@ if (is_null($party)) {
     ";
 
     $con = OpenCon();
-    $uquery = 'SELECT partyname, partybio FROM parties';
+    $uquery = 'SELECT partyname, partybio, id FROM parties';
     $stmt = $con->prepare($uquery);
     $stmt->execute();
     $result = $stmt->get_result();
     foreach ($result as $row) {
         $data = $row;
+        id = $row['id'];
+        $partyurl = "parties.php?party={$id}";
         echo "
         <div>
-            <h1 id='party-name'>" . $row['partyname'] . " </h1>
+            <h1 id='party-name'><a href=$partyurl> " . $row['partyname'] . " </h1>
             <p id='party-bio'>" . $row['partybio'] . "</p>
         </div>
         ";
