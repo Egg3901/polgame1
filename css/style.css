@@ -83,3 +83,9 @@ body {
     text-align: center;
     margin:auto;
 }
+#party-container {
+    margin: auto;
+    background-color: floralwhite;
+    opacity: 1;
+    text-align: center;
+}
