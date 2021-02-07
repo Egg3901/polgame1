@@ -39,7 +39,7 @@ else {
     <div class='main-container' id='profile container'>
     ";
     $con = OpenCon();
-    $query = 'SELECT partyname, partybio FROM parties WHERE id = ?';
+    $query = 'SELECT partyname, partybio, partylogo FROM parties WHERE id = ?';
     $stmt = $con->prepare($query);
     $stmt->bind_param("i",$party);
     $stmt->execute();
@@ -48,6 +48,8 @@ else {
         $data = $row;
         echo "
         <div id='party-container'>
+            <img id='party-logo' src=" . $row['partylogo'] . ">
+            <br>
             <h1 id='party-name'> " . $row['partyname'] . " </h1>
             <p id='party-bio'>" . $row['partybio'] . "</p>
         </div>
