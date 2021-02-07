@@ -27,7 +27,7 @@ else {
 ?>
 
 
-<div class="main-container">
+<div class="main-container" id="profile-main-container">
     <div class="profile-container">
         <h2 id="politician-name"> <?=$polname?> </h2>
         <br>

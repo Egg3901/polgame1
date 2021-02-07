@@ -14,7 +14,7 @@ else {
 
 if (is_null($party)) {
     echo "
-    <div class='main-container'>
+    <div class='main-container' id='parties-main-container'>
     ";
 
     $con = OpenCon();
