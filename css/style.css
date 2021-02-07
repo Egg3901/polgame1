@@ -34,9 +34,10 @@ body {
 .main-container {
     display: grid;
     background: floralwhite;
-    width: 70%;
     opacity: 1.0;
-    height: auto;
+    height: 100%;
+    width: 70%;
+    margin: auto;
 }
 #parties-main-container {
     grid-template-columns: 25% 25% 25%;
