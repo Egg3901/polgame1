@@ -44,6 +44,7 @@ body {
 }
 #profile-main-container {
     grid-template-columns: 70%;
+    margin: auto;
 }
 .profile-image {
     width: 30%;
