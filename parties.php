@@ -36,7 +36,7 @@ if (is_null($party)) {
 }
 else {
     echo "
-    <div class='main-container' id='profile-container'>
+    <div class='main-container' id='profile-main-container'>
     ";
     $con = OpenCon();
     $query = 'SELECT partyname, partybio, partylogo FROM parties WHERE id = ?';
