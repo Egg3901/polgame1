@@ -46,8 +46,6 @@ else {
     $result = $stmt->get_result();
     foreach ($result as $row) {
         $data = $row;
-        $id = $row['id'];
-
         echo "
         <div>
             <h1 id='party-name'> " . $row['partyname'] . " </h1>
