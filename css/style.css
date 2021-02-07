@@ -34,11 +34,16 @@ body {
 .main-container {
     display: grid;
     margin: auto;
-    grid-template-columns: 25% 25% 25%;
     background: floralwhite;
     width: 70%;
     opacity: .6;
     height: 90%;
+}
+#parties-main-container {
+    grid-template-columns: 25% 25% 25%;
+}
+#profile-main-container {
+    grid-template-columns: 100%;
 }
 .profile-image {
     width: 30%;
