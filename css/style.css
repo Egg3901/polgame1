@@ -80,6 +80,8 @@ body {
 }
 
 #politician-name {
+    float: top;
+    padding-top: 5%;
     text-align: center;
     margin:auto;
 }
