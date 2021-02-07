@@ -41,7 +41,7 @@ else {
     $con = OpenCon();
     $query = 'SELECT partyname, partybio FROM parties WHERE id = ?';
     $stmt = $con->prepare($query);
-    $stmt->bind_param($party);
+    $stmt->bind_param("i",$party);
     $stmt->execute();
     $result = $stmt->get_result();
     foreach ($result as $row) {
