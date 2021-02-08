@@ -13,8 +13,8 @@ body {
 .navgrid a {
     float: left;
     display: block;
-    padding-left: 10em;
-    padding-right: 10em;
+    padding-left: 8%;
+    padding-right: 8%;
 }
 
 
