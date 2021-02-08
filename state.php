@@ -71,7 +71,7 @@ echo "
 ";
 // get the state page data
 $con = OpenCon();
-$uquery = 'SELECT influence, polname, social, economic, id FROM accounts WHERE polstate = ? ORDER BY influence DESC';
+$uquery = 'SELECT influence, polname, social, economic, id, party FROM accounts WHERE polstate = ? ORDER BY influence DESC';
 $stmt = $con->prepare($uquery);
 $stmt->bind_param("s", $state);
 $stmt->execute();
