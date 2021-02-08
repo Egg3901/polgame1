@@ -18,7 +18,6 @@ if (is_null($id)) {
     $stmt->bind_result( $email,$influence, $polstate, $polname, $imgurl, $social, $economic, $ap, $funds, $partyid);
     $stmt->fetch();
     $stmt->close();
-    $con = OpenCon(); // opens a connection to the database, this function is from the above included script
     $stmt = $con->prepare('SELECT  partyname FROM parties WHERE id = ?');
     $stmt->bind_param('i', $partyid); // gets the id var from the current session, binds it to the
     $stmt->execute();
@@ -34,7 +33,6 @@ else {
     $stmt->bind_result( $influence, $polstate, $polname, $imgurl, $social, $economic, $ap, $funds, $partyid);
     $stmt->fetch();
     $stmt->close();
-    $con = OpenCon(); // opens a connection to the database, this function is from the above included script
     $stmt = $con->prepare('SELECT  partyname FROM parties WHERE id = ?');
     $stmt->bind_param('i', $partyid); // gets the id var from the current session, binds it to the
     $stmt->execute();
