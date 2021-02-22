@@ -77,76 +77,30 @@ $stmt->bind_param("s", $state);
 $stmt->execute();
 $result = $stmt->get_result();
 foreach ($result as $row) {
-    $data = $row;
+    $player_data = $row;
     print " <tr> ";
-    $i = round($data['influence'],2);
-    $n = $data['polname'];
-    $pid = $data['id'];
+    $i = round($player_data['influence'],2);
+    $n = $player_data['polname'];
+    $pid = $player_data['id'];
     echo " 
     <td> $i% </td> 
     <td> <a href='profile.php?id=$pid'>$n </td>    
 
         ";
-    $social = $data['social'];
-    if ($social <= 5){
-        $formattedsocial = "Very Right Wing";
-    }
-    if ($social <= 4){
-        $formattedsocial = "Right Wing";
-    }
-    if ($social <= 3){
-        $formattedsocial = "Leans Right Wing";
-    }
-    if ($social <= 1){
-        $formattedsocial = "Center Right";
-    }
-    if ($social <= 0){
-        $formattedsocial = "Centrist";
-    }
-    if ($social <= -1){
-        $formattedsocial = "Center Left";
-    }
-    if ($social <= -3){
-        $formattedsocial = "Leans Left Wing";
-    }
-    if ($social <= -4){
-        $formattedsocial = "Left Wing";
-    }
-    if ($social <= -5) {
-        $formattedsocial = "Libertarian Left";
-    }
-    print " <td> $formattedsocial </td> ";
-    $economic = $data['economic'];
-    if ($economic <= 5){
-        $formattedeconomic = "Libertarian Right";
-    }
-    if ($economic <= 4){
-        $formattedeconomic = "Right Wing";
-    }
-    if ($economic <= 3){
-        $formattedeconomic = "Leans Right Wing";
-    }
-    if ($economic <= 1){
-        $formattedeconomic = "Center Right";
-    }
-    if ($economic <= 0){
-        $formattedeconomic = "Centrist";
-    }
-    if ($economic <= -1){
-        $formattedeconomic = "Center Left";
-    }
-    if ($economic <= -3){
-        $formattedeconomic = "Leans Left Wing";
-    }
-    if ($economic <= -4){
-        $formattedeconomic = "Left Wing";
-    }
-    if ($economic <= -5){
-        $formattedeconomic = "Very Left Wing";
-    }
-    print " <td> $formattedsocial </td> ";
-
-
+    $economic = $player_data['economic'];
+    /// formats eonomic position for each player in state
+    include 'commonfunctions/formattingfunctions.php';
+    $position_data = formatPosition($position=$economic);
+    echo "
+    <td style='color: $position_data[1]'>". $position_data[0] . "</td>
+    ";
+    /// formats social position for each player in state
+    $social = $player_data['social'];
+    include 'commonfunctions/formattingfunctions.php';
+    $position_data = formatPosition($position=$social);
+    echo "
+    <td style='color: $position_data[1]'>". $position_data[0] . "</td>
+    ";
     print " </tr> ";
 }
 print "</table>
