@@ -22,7 +22,7 @@ $stmt->close();
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
 </head>
 <body>
-<nav class="navbar-grid">
+<nav>
     <h1 id="main-title-header" class="main-title-header">A House Divided</h1>
     <div class="navbar-grid">
 
