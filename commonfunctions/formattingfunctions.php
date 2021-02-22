@@ -47,7 +47,7 @@ function formatPosition($position_int): array {
         $color = "#DD491B";
         return array($formattedsocial, $color);
     }
-    if ($position_int <= -5) {
+    elseif ($position_int <= -5) {
         $formattedsocial = "Libertarian Left";
         $color = "#DD491B";
         return array($formattedsocial, $color);
