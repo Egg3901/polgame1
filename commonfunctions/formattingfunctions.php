@@ -57,6 +57,7 @@ function formatPosition($position): array
         return array($formatted_position, $color);
     }
     endif;
+
 }
 
 
