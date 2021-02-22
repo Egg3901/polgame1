@@ -96,7 +96,6 @@ foreach ($result as $row) {
     ";
     /// formats social position for each player in state
     $social = $player_data['social'];
-    include 'commonfunctions/formattingfunctions.php';
     $position_data = formatPosition($position=$social);
     echo "
     <td style='color: $position_data[1]'>". $position_data[0] . "</td>
