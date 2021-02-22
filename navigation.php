@@ -23,7 +23,7 @@ $stmt->close();
 </head>
 <body>
 <nav class="navbar-grid">
-    <h1 id="main-title-header" class="main-title-header">A House Divided</h1>
+    <h1 id="navbar-header" class="main-title-header">A House Divided</h1>
     <div class="navbar-grid">
 
         <div class="navbar-item"><a href="profile.php"><i class="fas fa-user-circle"></i><?php echo $polname ?></a></div>
