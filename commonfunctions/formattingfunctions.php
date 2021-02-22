@@ -1,6 +1,8 @@
 <?php
 /// functions for formatting information across the site
 ///
+error_reporting(E_ALL);
+ini_set('display_errors', 'on');
 
 function formatPosition($position_int): array {
     if ($position_int <= 5) :
