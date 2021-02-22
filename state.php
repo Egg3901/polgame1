@@ -2,6 +2,7 @@
 
 <?php
 include 'navigation.php';
+include 'commonfunctions/formattingfunctions.php';
 
 error_reporting(E_ALL);
 ini_set('display_errors', 'on');
@@ -89,7 +90,7 @@ foreach ($result as $row) {
         ";
     $economic = $player_data['economic'];
     /// formats eonomic position for each player in state
-    include 'commonfunctions/formattingfunctions.php';
+
     $position_data = formatPosition($position=$economic);
     echo "
     <td style='color: $position_data[1]'>". $position_data[0] . "</td>

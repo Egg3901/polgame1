@@ -1,6 +1,7 @@
 <?php
 $id = $_GET['id'];
 include 'navigation.php';
+include 'commonfunctions/formattingfunctions.php';
 
 error_reporting(E_ALL);
 ini_set('display_errors', 'on');
@@ -74,7 +75,7 @@ else {
                 <td>Social Position:</td>
                 <td>
                     <?php
-                    include 'commonfunctions/formattingfunctions.php';
+
                     $position_data = formatPosition($position=$economic);
                     echo "
                     <p style='color: $position_data[1]'>". $position_data[0] . "</p>
