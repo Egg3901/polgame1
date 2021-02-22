@@ -14,9 +14,10 @@ body {
     grid-column: 1 / 5;
 }
 .navbar-item {
-    background-color: darkblue;
+    background-color: lightslategrey;
     float: left;
     display: block;
+    margin: auto;
     padding-left: 7.5%;
     padding-right: 7.5%;
 
