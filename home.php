@@ -13,7 +13,7 @@ if (!isset($_SESSION['loggedin'])) {
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
 </head>
 <body class="loggedin">
-<nav class="navtop">
+<nav class="navbar-grid">
     <div>
         <h1>Website Title</h1>
         <a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
