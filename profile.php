@@ -15,7 +15,7 @@ if (is_null($id)) {
     $stmt = $con->prepare('SELECT email, influence, polstate, polname, imgurl, social, economic, action, funding, party FROM accounts WHERE id = ?');
     $stmt->bind_param('i', $id); // gets the id var from the current session, binds it to the
     $stmt->execute();
-    $stmt->bind_result( $email,$influence, $polstate, $polname, $imgurl, $social, $economic, $ap, $funds, $partyid);
+    $stmt->bind_result( $email,$influence, $home_state, $polname, $imgurl, $social, $economic, $ap, $funds, $partyid);
     $stmt->fetch();
     $stmt->close();
     $stmt = $con->prepare('SELECT  partyname FROM parties WHERE id = ?');
@@ -30,7 +30,7 @@ else {
     $stmt = $con->prepare('SELECT  influence, polstate, polname, imgurl, social, economic, action, funding, party FROM accounts WHERE id = ?');
     $stmt->bind_param('i', $id); // gets the id var from the current session, binds it to the
     $stmt->execute();
-    $stmt->bind_result( $influence, $polstate, $polname, $imgurl, $social, $economic, $ap, $funds, $partyid);
+    $stmt->bind_result( $influence, $home_state, $polname, $imgurl, $social, $economic, $ap, $funds, $partyid);
     $stmt->fetch();
     $stmt->close();
     $stmt = $con->prepare('SELECT  partyname FROM parties WHERE id = ?');
@@ -68,40 +68,13 @@ else {
             </tr>
             <tr>
                 <td>Location:</td>
-                <td><a href="state.php?state=<?=$polstate?>"><?=$polstate?></a></td>
+                <td><a href="state.php?state=<?=$home_state?>"><?=$home_state?></a></td>
             </tr>
             <tr>
                 <td>Social Position:</td>
                 <td>
                     <?php
-                    if ($social <= 5){
-                        $formattedsocial = "Very Right Wing";
-                    }
-                    if ($social <= 4){
-                        $formattedsocial = "Right Wing";
-                    }
-                    if ($social <= 3){
-                        $formattedsocial = "Leans Right Wing";
-                    }
-                    if ($social <= 1){
-                        $formattedsocial = "Center Right";
-                    }
-                    if ($social <= 0){
-                        $formattedsocial = "Centrist";
-                    }
-                    if ($social <= -1){
-                        $formattedsocial = "Center Left";
-                    }
-                    if ($social <= -3){
-                        $formattedsocial = "Leans Left Wing";
-                    }
-                    if ($social <= -4){
-                        $formattedsocial = "Left Wing";
-                    }
-                    if ($social <= -5){
-                        $formattedsocial = "Libertarian Left";
-                    }
-                    echo $formattedsocial;
+                    {{ %%S_INCLUDE}}
                     ?>
 
 
@@ -112,37 +85,11 @@ else {
                 <td>
 
                     <?php
-
-                    if ($economic <= 5){
-                        $formattedeconomic = "Libertarian Right";
-                    }
-                    if ($economic <= 4){
-                        $formattedeconomic = "Right Wing";
-                    }
-                    if ($economic <= 3){
-                        $formattedeconomic = "Leans Right Wing";
-                    }
-                    if ($economic <= 1){
-                        $formattedeconomic = "Center Right";
-                    }
-                    if ($economic <= 0){
-                        $formattedeconomic = "Centrist";
-                    }
-                    if ($economic <= -1){
-                        $formattedeconomic = "Center Left";
-                    }
-                    if ($economic <= -3){
-                        $formattedeconomic = "Leans Left Wing";
-                    }
-                    if ($economic <= -4){
-                        $formattedeconomic = "Left Wing";
-                    }
-                    if ($economic <= -5){
-                        $formattedeconomic = "Very Left Wing";
-                    }
-
-
-                    echo "$formattedeconomic";
+                    include 'commonfunctions/formattingfunctions.php';
+                    $position_data = formatPosition($position_int=$economic);
+                    echo "
+                    <p></p>
+                    "
                     ?>
 
 
