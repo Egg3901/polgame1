@@ -74,7 +74,9 @@ else {
                 <td>Social Position:</td>
                 <td>
                     <?php
-                    {{ %%S_INCLUDE}}
+                    echo"
+                    
+                    "
                     ?>
 
 
@@ -83,16 +85,13 @@ else {
             <tr>
                 <td>Economic Position:</td>
                 <td>
-
                     <?php
                     include 'commonfunctions/formattingfunctions.php';
                     $position_data = formatPosition($position_int=$economic);
                     echo "
-                    <p></p>
+                    <p style='color: $position_data[1]'><?=$position_data[0]></p>
                     "
                     ?>
-
-
                 </td>
             </tr>  <!--- economic position formatting ---->
         </table>
