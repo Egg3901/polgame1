@@ -48,12 +48,12 @@ body {
 #profile-main-container {
     grid-template-columns: 70%;
     justify-content: center;
-    justify-items: center;
     margin: auto;
 
 }
 .profile-image {
-    width: 30%;
+    height: 20%;
+    width: auto;
     display: block;
     margin-left: auto;
     margin-right: auto;
