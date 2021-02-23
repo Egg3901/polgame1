@@ -46,7 +46,7 @@ body {
     grid-template-columns: 25% 25% 25%;
 }
 #profile-main-container {
-    grid-template-columns: auto;
+    grid-template-columns: 70%;
     justify-content: center;
     justify-items: center;
     margin: auto;
