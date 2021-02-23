@@ -24,13 +24,10 @@ $stmt->close();
 <body>
 <nav class="navbar-grid">
     <h1 id="navbar-header" class="main-title-header">A House Divided</h1>
-    <div class="navbar-grid">
-
-        <div class="navbar-item"><a href="profile.php"><i class="fas fa-user-circle"></i><?php echo $polname ?></a></div>
-        <div class="navbar-item"><a href="parties.php"><i class="fas fa-democrat"></i> Parties</a></div>
-        <div class="navbar-item"><a href="campaignoffice.php"><i class="fas fa-briefcase"></i> Campaign Office</a></div>
-        <div class="navbar-item"><a href="state.php?state=<?=$polstate?>"><i class="fas fa-flag-usa"></i><?=$polstate?></a></div>
-        <div class="navbar-item"><a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a></div>
-    </div>
+    <div class="navbar-item"><a href="profile.php"><i class="fas fa-user-circle"></i><?php echo $polname ?></a></div>
+    <div class="navbar-item"><a href="parties.php"><i class="fas fa-democrat"></i> Parties</a></div>
+    <div class="navbar-item"><a href="campaignoffice.php"><i class="fas fa-briefcase"></i> Campaign Office</a></div>
+    <div class="navbar-item"><a href="state.php?state=<?=$polstate?>"><i class="fas fa-flag-usa"></i><?=$polstate?></a></div>
+    <div class="navbar-item"><a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a></div>
 </nav>
 <br>
