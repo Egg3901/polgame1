@@ -2,7 +2,7 @@
 
 <?php
 include 'navigation.php';
-include 'commonfunctions/formattingfunctions.php';
+include 'common_functions/formatting_functions.php';
 
 error_reporting(E_ALL);
 ini_set('display_errors', 'on');
