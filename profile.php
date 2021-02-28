@@ -1,10 +1,11 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 'on');
 $id = $_GET['id'];
 include 'navigation.php';
 include 'commonfunctions/formattingfunctions.php';
 
-error_reporting(E_ALL);
-ini_set('display_errors', 'on');
+
 
 if (!isset($_SESSION['loggedin'])) {
     header('Location: index.html');
