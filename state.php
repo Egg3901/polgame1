@@ -43,12 +43,8 @@ echo "
             <th> Junior Senator </th>
             <th> Senior Senator </th>
             <tr>
-                <td style='text-align: center;'>Governor " . $gov . "</td></tr>                          
-            </td>
-            <tr>
-                <td style='text-align: center;'> Junior Senator " . $gov . "</td></tr>                          
-            </td>
-            <tr>
+                <td style='text-align: center;'>Governor " . $gov . "</td>
+                <td style='text-align: center;'> Junior Senator " . $gov . "</td><
                 <td style='text-align: center;'> Senior Senator " . $gov . "</td></tr>                          
             </td>
                     
