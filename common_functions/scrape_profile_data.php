@@ -36,6 +36,7 @@ function fetchProfile($profile_id): array {
         //$stmt->fetch();
         //$stmt->close();
         //broken party stuff
+
     }
     return array($influence, $home_state, $polname, $imgurl, $social, $economic, $ap, $funds, $partyid);
 }

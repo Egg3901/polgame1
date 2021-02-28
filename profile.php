@@ -2,8 +2,8 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 'on');
 //
-include 'navigation.php';
-include 'commonfunctions/formattingfunctions.php';
+include 'common_functions/navigation.php';
+include 'common_functions/formatting_functions.php';
 include 'common_functions/scrape_profile_data.php';
 
 // fetch profile ID from link
@@ -26,8 +26,9 @@ list ($influence, $politician_name, $home_state, $img_path, $social, $economic, 
     <div class="profile-container">
         <h2 id="politician-name"> <?=$politician_name?> </h2>
         <br>
+        <img class="profile-image" src="<?=$img_path?>">
         <table id="politician-table" class="info-table">
-            <img class="profile-image" src="<?=$img_path?>">
+
             <br>
             <tr>
                 <td>Recognition:</td>
@@ -77,5 +78,5 @@ list ($influence, $politician_name, $home_state, $img_path, $social, $economic, 
 </div>
 </body>
 </html>
-<?php
-CloseCon($con);
+
+
