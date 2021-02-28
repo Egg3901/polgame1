@@ -39,32 +39,26 @@ echo "
 echo "
 </div>
     <table class='info-table' style='width: 30%'>
-                <tr>
-                    <td>
-                        <table class='statepoliticians' id='gov'>
-                                <tr> <td style='text-align: center;'>Governor</td></tr>
-                                <tr> <td style='text-align: center;'>Governor " . $gov . "</td> </tr>
-                        </table>
-                    </td>
-                    <td>
-                        <table class='statepoliticians' id='jsen'>
-                                <tr> <td style='text-align: center;'>Junior Senator</td></tr>
-                                <tr> <td style='text-align: center;'>None</td> </tr>
-                        </table>
-                    </td>
-                    <td>
-                        <table class='statepoliticians' id='ssen'>
-                                <tr> <td style='text-align: center;'>Senior Senator</td></tr>
-                                <tr> <td style='text-align: center;'>None</td> </tr>
-                        </table>
-                    </td>
-                </tr>
+            <th> Governor </th>
+            <th> Junior Senator </th>
+            <th> Senior Senator </th>
+            <tr>
+                <td style='text-align: center;'>Governor " . $gov . "</td></tr>                          
+            </td>
+            <tr>
+                <td style='text-align: center;'> Junior Senator " . $gov . "</td></tr>                          
+            </td>
+            <tr>
+                <td style='text-align: center;'> Senior Senator " . $gov . "</td></tr>                          
+            </td>
+                    
+                   
     </table>
             
         
             
   
-    <table class='infotable' style='width: 40%'>
+    <table class='info-table' style='width: 40%'>
         <th>Name Recognition</th>
         <th>Politician Name</th>
         <th>Social Position</th>
