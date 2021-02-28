@@ -21,15 +21,12 @@ list ($influence, $politician_name, $home_state, $img_path, $social, $economic, 
 //$party_id = $profile_data_array[8];
 //
 ?>
-
 <div class="main-container" id="profile-main-container">
     <div class="profile-container">
         <h2 id="politician-name"> <?=$politician_name?> </h2>
         <br>
-        <img class="profile-image" src="<?=$img_path?>">
+        <img class="profile-image" src="<?=$img_path?>" alt="your profile image">
         <table id="politician-table" class="info-table">
-
-            <br>
             <tr>
                 <td>Recognition:</td>
                 <td><?=$influence?>%</td>
@@ -76,7 +73,7 @@ list ($influence, $politician_name, $home_state, $img_path, $social, $economic, 
 
     </div>
 </div>
-</body>
+
 </html>
 
 
