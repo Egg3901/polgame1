@@ -38,6 +38,6 @@ function fetchProfile($profile_id): array {
         //broken party stuff
 
     }
-    return array($influence, $home_state, $polname, $imgurl, $social, $economic, $ap, $funds, $partyid);
+    return array($influence, $polname, $home_state, $imgurl, $social, $economic, $ap, $funds, $partyid);
 }
 ?>
