@@ -88,16 +88,16 @@ foreach ($result as $row) {
     <td> <a href='profile.php?id=$pid'>$n </td>    
 
         ";
-    $economic = $player_data['economic'];
+    $economic = $player_data['social'];
     /// formats eonomic position for each player in state
 
-    $position_data = formatPosition($position=$economic);
+    $position_data = formatPosition($position=$social);
     echo "
     <td style='color: $position_data[1]'>". $position_data[0] . "</td>
     ";
     /// formats social position for each player in state
-    $social = $player_data['social'];
-    $position_data = formatPosition($position=$social);
+    $social = $player_data['economic'];
+    $position_data = formatPosition($position=$ecnomic);
     echo "
     <td style='color: $position_data[1]'>". $position_data[0] . "</td>
     ";
