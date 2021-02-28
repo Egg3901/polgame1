@@ -10,28 +10,24 @@ $statef =urlencode( $_GET['state']);
 $state = str_replace('+', ' ', $statef);
 $imgsource = "img/states/{$statef}";
 $con = OpenCon();
-$uquery = 'SELECT governor, jsen, ssen, population, regionalflair, govtime FROM states WHERE name = ?';
-$stmt = $con->prepare($uquery);
-print"
-        <p> $statef </p>
-";
+$state_info_query = 'SELECT governor, jsen, ssen, population, regionalflair, govtime FROM states WHERE name = ?';
+$stmt = $con->prepare($state_info_query);
 $stmt->bind_param("s", $state);
 $stmt->execute();
 $stmt->bind_result($gov,$jsen,$ssen, $pop, $regionalflair, $govtime);
 $stmt->fetch();
 $stmt->close();
+$background_url = 'https://wallpaperaccess.com/full/445331.jpg';
 echo "
 <style>
     
 </style>
 <div class='main-container'>
-    <div class='State-Flag'>
+    <div class='State-Flag' style='background-image: url(" . $background_url . "); background-size: cover;'>
         <h1 style='text-align: center; font-size: 40px;'>The " . $regionalflair . " of   " . $state . "   </h1>
         <br>
         <img style='width: 30%; height: auto; border: 2px solid black; display: block; margin: auto;' src=$imgsource alt='state image'>
-        <br>
-        <hr>
-        <br>
+        <br><br>
 "
 
 ;
@@ -138,8 +134,7 @@ echo "
                             <button type='submit' value='Join Race' style='margin: auto; width: 100%'> Join Gubernatorial Race</button>
                     </form>
             </div>
-         </div>
-        </div>
+         
     </div>
     ";
     echo "
