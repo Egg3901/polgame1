@@ -4,6 +4,8 @@ ini_set('display_errors', 'on');
 //
 include 'navigation.php';
 include 'commonfunctions/formattingfunctions.php';
+include 'common_functions/scrape_profile_data.php';
+
 // fetch profile ID from link
 $id = $_GET['id'];
 $profile_data_array = fetchProfile($id);
