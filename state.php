@@ -89,7 +89,7 @@ foreach ($result as $row) {
     <td> <a href='profile.php?id=$pid'>$n </td>    
 
         ";
-    $economic = $player_data['social'];
+    $social= $player_data['social'];
     /// formats eonomic position for each player in state
 
     $position_data = formatPosition($position=$social);
@@ -97,7 +97,7 @@ foreach ($result as $row) {
     <td style='color: $position_data[1]'>". $social . $position_data[0] . "</td>
     ";
     /// formats social position for each player in state
-    $social = $player_data['economic'];
+    $economic = $player_data['economic'];
     $position_data = formatPosition($position=$economic);
     echo "
     <td style='color: $position_data[1]'>". $economic . $position_data[0] . "</td>
@@ -111,15 +111,14 @@ print "</table>
 echo "
 
 <br>
-</div>
-<div class='gov'>
+<div class='state-race' id='gov'>
      <div>
         <h1 style='text-align: center;'> Gubernatorial Election</h1>
         
         <table class='infotable' style='text-align; auto;'>
             
                 <h1 style='text-align: center;'>Candidates</h1>
-                <p style='text-align: center;'> Election in ".  $govtime . " hours </p>
+                <p style='text-align: center;'> Election in " .  $govtime . " hours </p>
             <table border='.5'  class='race' style='margin:auto; width: 40%;'>
                     <th>Politician Name</th>
                     <th>Name Recognition</th>
@@ -154,7 +153,7 @@ echo "
     </div>
     ";
     echo "
-<div class='jsen'>
+<div class='state-race' id='senate'>
      <div>
         <h1 style='text-align: center;'> Junior Senator Election</h1>
         
@@ -195,7 +194,7 @@ echo "
      </div>
     </div>
 </div>
-<div class='ssen'>
+<div class='state-race' id='senate'>
      <div>
         <h1 style='text-align: center;'> Senior Senator Election</h1>
         
