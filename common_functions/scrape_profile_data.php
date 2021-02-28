@@ -8,7 +8,7 @@ function fetchProfile($profile_id): array {
     if (is_null($profile_id)) {
         $con = OpenCon(); // opens a connection to the database, this function is from the above included script
         $stmt = $con->prepare('SELECT influence, polstate, polname, imgurl, social, economic, action, funding, party FROM accounts WHERE id = ?');
-        $stmt->bind_param('i', $id); // gets the id var from the current session, binds it to the
+        $stmt->bind_param('i', $_SESSION['id']); // gets the id var from the current session, binds it to the
         $stmt->execute();
         $stmt->bind_result( $influence, $home_state, $polname, $imgurl, $social, $economic, $ap, $funds, $partyid);
         $stmt->fetch();
@@ -24,7 +24,7 @@ function fetchProfile($profile_id): array {
     } else {
         $con = OpenCon(); // opens a connection to the database, this function is from the above included script
         $stmt = $con->prepare('SELECT  influence, polstate, polname, imgurl, social, economic, action, funding, party FROM accounts WHERE id = ?');
-        $stmt->bind_param('i', $id); // gets the id var from the current session, binds it to the
+        $stmt->bind_param('i', $profile_id); // gets the id var from the current session, binds it to the
         $stmt->execute();
         $stmt->bind_result($influence, $home_state, $polname, $imgurl, $social, $economic, $ap, $funds, $partyid);
         $stmt->fetch();
