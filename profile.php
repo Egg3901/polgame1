@@ -1,20 +1,31 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 'on');
-
-$id = $_GET['id'];
+//
 include 'navigation.php';
 include 'commonfunctions/formattingfunctions.php';
-
-
-list($influence, $home_state, $fetchProfile($id, $viewer_id);
+// fetch profile ID from link
+$id = $_GET['id'];
+$profile_data_array = fetchProfile($id);
+// fetch profile data based on id
+$influence = $profile_data_array[0];
+$politician_name = $profile_data_array[2];
+$home_state = $profile_data_array[1];
+$img_path = $profile_data_array[3];
+$social = $profile_data_array[4];
+$economic = $profile_data_array[5];
+$actions = $profile_data_array[6];
+$funds = $profile_data_array[7];
+$party_id = $profile_data_array[8];
+//
 ?>
+
 <div class="main-container" id="profile-main-container">
     <div class="profile-container">
-        <h2 id="politician-name"> <?=$polname?> </h2>
+        <h2 id="politician-name"> <?=$politician_name?> </h2>
         <br>
         <table id="politician-table" class="info-table">
-            <img class="profile-image" src="<?=$imgurl?>">
+            <img class="profile-image" src="<?=$img_path?>">
             <br>
             <tr>
                 <td>Recognition:</td>
