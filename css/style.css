@@ -3,28 +3,31 @@ body {
     background-color: #416792;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='40' viewBox='0 0 50 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23c2beff' fill-opacity='0.08'%3E%3Cpath d='M40 10L36.67 0h-2.11l3.33 10H20l-2.28 6.84L12.11 0H10l6.67 20H10l-2.28 6.84L2.11 10 5.44 0h-2.1L0 10l6.67 20-3.34 10h2.11l2.28-6.84L10 40h20l2.28-6.84L34.56 40h2.1l-3.33-10H40l2.28-6.84L47.89 40H50l-6.67-20L50 0h-2.1l-5.62 16.84L40 10zm1.23 10l-2.28-6.84L34 28h4.56l2.67-8zm-10.67 8l-2-6h-9.12l2 6h9.12zm-12.84-4.84L12.77 38h15.79l2.67-8H20l-2.28-6.84zM18.77 20H30l2.28 6.84L37.23 12H21.44l-2.67 8zm-7.33 2H16l-4.95 14.84L8.77 30l2.67-8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
-.navtop {
+.navbar-grid {
+    width: 100%;
     background-color: lightslategrey;
-}
-.navgrid {
-    background-color: darkblue;
+    display: grid;
+    grid-column-gap: 4%;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: auto;
+    align-content: space-evenly;
+    justify-items: center;
+    padding: .5em;
 
 }
-.navgrid a {
-    float: left;
-    display: block;
-    padding-left: 7.5%;
-    padding-right: 7.5%;
+#navbar-header {
+    grid-column: 1 / 6;
 }
+.navbar-item {
+    background-color: lightslategrey;
 
 
+}
 .main-title-header {
     font-family: Tahoma;
     font-weight: bold;
     text-align: center;
     color: antiquewhite;
-
-
 }
 .main-title-container {
     background: lightslategrey;
@@ -44,10 +47,13 @@ body {
 }
 #profile-main-container {
     grid-template-columns: 70%;
+    justify-content: center;
     margin: auto;
+
 }
 .profile-image {
-    width: 30%;
+    height: 20%;
+    width: auto;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -58,7 +64,7 @@ body {
     padding-top: 1em;
     padding-bottom: 5px;
     border: 1px solid black;
-    width: 60%;
+    width: 100%;
     margin:auto;
     background:white;
     opacity: 1.0;
