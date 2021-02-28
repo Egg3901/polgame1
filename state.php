@@ -175,8 +175,6 @@ echo "
                         <button type='submit' value='Join Race' style='margin: auto; width: 100%'> Join Junior Senate Race</button>
                 </form>
         </div>
-     </div>
-    </div>
 </div>
 <div class='state-race' id='senate'>
      <div>
