@@ -10,15 +10,16 @@ include 'common_functions/scrape_profile_data.php';
 $profile_id =urlencode( $_GET['id']);
 $profile_data_array = fetchProfile($profile_id);
 // fetch profile data based on id
-$influence = $profile_data_array[0];
-$politician_name = $profile_data_array[2];
-$home_state = $profile_data_array[1];
-$img_path = $profile_data_array[3];
-$social = $profile_data_array[4];
-$economic = $profile_data_array[5];
-$actions = $profile_data_array[6];
-$funds = $profile_data_array[7];
-$party_id = $profile_data_array[8];
+list ($influence, $politician_name, $home_state, $img_path, $social, $economic, $actions, $funds, $party_id);
+//$influence = $profile_data_array[0];
+//$politician_name = $profile_data_array[2];
+//$home_state = $profile_data_array[1];
+//$img_path = $profile_data_array[3];
+//$social = $profile_data_array[4];
+//$economic = $profile_data_array[5];
+//$actions = $profile_data_array[6];
+//$funds = $profile_data_array[7];
+//$party_id = $profile_data_array[8];
 //
 ?>
 
