@@ -8,9 +8,8 @@ include 'common_functions/scrape_profile_data.php';
 
 // fetch profile ID from link
 $profile_id =urlencode( $_GET['id']);
-$profile_data_array = fetchProfile($profile_id);
 // fetch profile data based on id
-list ($influence, $politician_name, $home_state, $img_path, $social, $economic, $actions, $funds, $party_id);
+list ($influence, $politician_name, $home_state, $img_path, $social, $economic, $actions, $funds, $party_id) = fetchProfile($profile_id);
 //$influence = $profile_data_array[0];
 //$politician_name = $profile_data_array[2];
 //$home_state = $profile_data_array[1];
