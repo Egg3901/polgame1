@@ -49,7 +49,7 @@ list ($influence, $politician_name, $home_state, $img_path, $social, $economic, 
                 <td>
                     <?php
 
-                    $position_data = formatPosition($position=$economic);
+                    $position_data = formatPosition($position=$social);
                     echo "
                     <p style='color: $position_data[1]'>". $position_data[0] . "</p>
                     "
