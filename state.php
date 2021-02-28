@@ -88,13 +88,13 @@ foreach ($result as $row) {
 
     $position_data = formatPosition($position=$social);
     echo "
-    <td style='color: $position_data[1]'>". $social . $position_data[0] . "</td>
+    <td style='color: $position_data[1]'>" . $position_data[0] . "</td>
     ";
     /// formats social position for each player in state
     $economic = $player_data['economic'];
     $position_data = formatPosition($position=$economic);
     echo "
-    <td style='color: $position_data[1]'>". $economic . $position_data[0] . "</td>
+    <td style='color: $position_data[1]'>" . $position_data[0] . "</td>
     ";
     print " </tr> ";
 }
