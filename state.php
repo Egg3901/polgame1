@@ -24,6 +24,7 @@ echo "
 <style>
     
 </style>
+<div class='main-container'>
     <div class='State-Flag'>
         <h1 style='text-align: center; font-size: 40px;'>The " . $regionalflair . " of   " . $state . "   </h1>
         <br>
