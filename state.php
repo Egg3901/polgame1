@@ -28,12 +28,11 @@ echo "
         <br>
         <img style='width: 30%; height: auto; border: 2px solid black; display: block; margin: auto;' src=$imgsource alt='state image'>
         <br><br>
-"
-
-;
+    </div>
+";
 
 echo "
-</div>
+
     <table class='info-table' style='width: 30%'>
             <th> Governor </th>
             <th> Junior Senator </th>
