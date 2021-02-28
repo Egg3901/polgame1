@@ -7,8 +7,8 @@ include 'commonfunctions/formattingfunctions.php';
 include 'common_functions/scrape_profile_data.php';
 
 // fetch profile ID from link
-$id = $_GET['id'];
-$profile_data_array = fetchProfile($id);
+$profile_id =urlencode( $_GET['id']);
+$profile_data_array = fetchProfile($profile_id);
 // fetch profile data based on id
 $influence = $profile_data_array[0];
 $politician_name = $profile_data_array[2];
