@@ -1,19 +1,14 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 'on');
+
 $id = $_GET['id'];
 include 'navigation.php';
 include 'commonfunctions/formattingfunctions.php';
 
 
-
-
-
 list($influence, $home_state, $fetchProfile($id, $viewer_id);
-
-
 ?>
-
 <div class="main-container" id="profile-main-container">
     <div class="profile-container">
         <h2 id="politician-name"> <?=$polname?> </h2>

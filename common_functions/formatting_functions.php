@@ -1,8 +1,7 @@
 <?php
 /// functions for formatting information across the site
 ///
-error_reporting(E_ALL);
-ini_set('display_errors', 'on');
+
 
 /**
  * @param $position * the economic/social position
