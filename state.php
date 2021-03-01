@@ -19,9 +19,6 @@ $stmt->fetch();
 $stmt->close();
 $background_url = 'https://wallpaperaccess.com/full/445331.jpg';
 echo "
-<style>
-    
-</style>
 <div class='main-container'>
     <div class='State-Flag' style='background-image: url(" . $background_url . "); background-size: cover;'>
         <h1 style='text-align: center; font-size: 40px;'>The " . $regionalflair . " of   " . $state . "   </h1>
