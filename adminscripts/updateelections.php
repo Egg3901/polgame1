@@ -15,6 +15,7 @@ foreach ((array) $result as $row) {
     //iterates through every state
     $state_name = $row['statename'];
     $state_population = $row['population'];
+    print "<p> " . $state_population . "</p>";
     $gov_time_remaining = $row['govtime'];
     $wmc_voter_share = $row['wmcvotershare'];
     $wmc_total_appeal = $row['wmctotalappeal'];
