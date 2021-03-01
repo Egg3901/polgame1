@@ -39,7 +39,7 @@ body {
     display: grid;
     background: floralwhite;
     opacity: 1.0;
-    height: 100%;
+    height: auto;
     width: 70% !important;
     margin: auto;
 }
