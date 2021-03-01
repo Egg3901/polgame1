@@ -31,6 +31,7 @@ foreach ((array) $result as $row) {
      * @return mysqli_result
      */
     function findCandidatesByRace($con, $state_name, $race_to_search): mysqli_result {
+        print "<td> " . $state_name . $race_to_search . " </td> ";
         $gov_candidates_query = 'SELECT id, influence, social, economic, party FROM accounts WHERE polstate = ? AND race = ? ';
         $gov_query = $con->prepare($gov_candidates_query);
         $gov_query->bind_params('si',$state_name, $race_to_search);
