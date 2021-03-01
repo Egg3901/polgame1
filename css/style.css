@@ -12,7 +12,7 @@ body {
     grid-template-rows: auto;
     align-content: space-evenly;
     justify-items: center;
-    padding: .5em;
+    padding-: .5em;
     position: fixed;
 
 }

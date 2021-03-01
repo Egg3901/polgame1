@@ -75,7 +75,7 @@ foreach ($result as $row) {
 
         ";
     $social= $player_data['social'];
-    /// formats eonomic position for each player in state
+    /// formats economic position for each player in state
 
     $position_data = formatPosition($position=$social);
     echo "
@@ -86,15 +86,10 @@ foreach ($result as $row) {
     $position_data = formatPosition($position=$economic);
     echo "
     <td style='color: $position_data[1]'>" . $position_data[0] . "</td>
-    ";
-    print " </tr> ";
+    </tr>";
 }
-print "</table>
-
-";
-
 echo "
-
+</table>
 <br>
 <div class='state-race' id='gov'>
      <div>
