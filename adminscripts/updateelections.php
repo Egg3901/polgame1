@@ -11,8 +11,7 @@ $stmt = $con->prepare($state_data_query);
 $stmt->execute();
 $stmt->fetch();
 $result = $stmt->get_result();
-
-while ($row = $result->fetch_assoc()) {
+foreach ($result as $row) {
     //iterates through every state
     $state_name = $row['name'];
     $state_population = $row['population'];
