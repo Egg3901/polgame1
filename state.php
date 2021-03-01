@@ -21,7 +21,7 @@ $background_url = 'https://wallpaperaccess.com/full/445331.jpg';
 echo "
 <div class='main-container'>
     <div class='State-Flag' style='background-image: url(" . $background_url . "); background-size: cover;'>
-        <h1 style='text-align: center; font-size: 40px;'>The " . $regionalflair . " of   " . $state . "   </h1>
+        <h1 class='main-title-header' style='text-align: center; font-size: 40px;'>The " . $regionalflair . " of   " . $state . "   </h1>
         <br>
         <img style='width: 30%; height: auto; border: 2px solid black; display: block; margin: auto;' src=$imgsource alt='state image'>
         <br><br>
