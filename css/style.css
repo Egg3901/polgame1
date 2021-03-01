@@ -21,9 +21,9 @@ body {
 }
 .navbar-item {
     background-color: lightslategrey;
-
-
+    outline-color: transparent;
 }
+
 .main-title-header {
     font-family: Tahoma;
     font-weight: bold;
