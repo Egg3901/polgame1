@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 'on');
 
 $con = OpenCon();
-$state_data_query = 'SELECT name, population, govtime, wmcvotershare, wmctotalappeal, wmcecon, wmcsocialFROM states';
+$state_data_query = 'SELECT name, population, govtime, wmcvotershare, wmctotalappeal, wmcecon, wmcsocial FROM states';
 $stmt = $con->prepare($state_data_query);
 
 $stmt->execute();
