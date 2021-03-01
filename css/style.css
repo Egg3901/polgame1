@@ -21,7 +21,10 @@ body {
 }
 .navbar-item {
     background-color: lightslategrey;
+}
+.navbar-item a {
     outline-color: transparent;
+    text-decoration: none;
 }
 
 .main-title-header {
