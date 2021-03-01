@@ -3,12 +3,15 @@ include 'connect.php';
 
 error_reporting(E_ALL);
 ini_set('display_errors', 'on');
+
 $con = OpenCon();
-$state_data_query = 'FROM states SELECT name, population, govtime, wmcvotershare, wmctotalappeal, wmcecon, wmcsocial WHERE id < 100';
+$state_data_query = 'SELECT name, population, govtime, wmcvotershare, wmctotalappeal, wmcecon, wmcsocialFROM states';
 $stmt = $con->prepare($state_data_query);
+
 $stmt->execute();
 $stmt->fetch();
 $stmt->close();
+
 $result = $stmt->bind_result($state_name,$state_population,$gov_time_remaining, $wmc_voter_share, $wmc_total_appeal, $wmc_econ, $wmc_social);
 foreach ($result as $row) {
     //iterates through every state
