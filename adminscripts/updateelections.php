@@ -11,11 +11,17 @@ $stmt = $con->prepare($state_data_query);
 $stmt->execute();
 $stmt->fetch();
 $stmt->close();
+$result = $stmt->get_result();
 
-$result = $stmt->bind_result($state_name,$state_population,$gov_time_remaining, $wmc_voter_share, $wmc_total_appeal, $wmc_econ, $wmc_social);
 foreach ($result as $row) {
     //iterates through every state
-
+    $state_name = $row['name'];
+    $state_population = $row['population'];
+    $gov_time_remaining = $row['govtime'];
+    $wmc_voter_share = $row['wmcvotershare'];
+    $wmc_total_appeal = $row['wmctotalappeal'];
+    $wmc_econ = $row['wmcecon'];
+    $wmc_social = $row['wmcsocial'];
     $voter_turnout = .61;
     $voter_base = round(($state_population * $voter_turnout));
     $votes_added_per_update = round(($voter_base / $gov_time_remaining));
@@ -69,13 +75,13 @@ foreach ($result as $row) {
         return $appeal_share * $votes_added;
     }
     $array_of_race = arr(1, 2, 3); //gov, junior senate, senior senate respectively
-    foreach ($array_of_race as &$race_param) {
+    foreach ($array_of_race as $race_param) {
         $candidates_in_race = findCandidatesByRace($con, $state_name, $race_param);
         foreach ($candidates_in_race as $candidate_result) {
             $candidate_appeal_to_demographic = calculateDemographicAppeal($candidate_result, $wmc_total_appeal, $wmc_econ, $wmc_social);
         }
         foreach ($candidates_in_race as $candidate_result) {
-            $candidates_votes = calculateVotesPerCandidate($candidate_result, $wmc_total_appeal, $voter_base, $candidate_appeal_to_demographic);
+            $candidates_votes = calculateVotesPerCandidate($wmc_total_appeal, $voter_base, $candidate_appeal_to_demographic);
             $candidate_id = $candidate_result['id'];
             $votes_added = 'UPDATE accounts SET votes = ? WHERE id = ?';
             $election_update = $con ->prepare($votes_added);
