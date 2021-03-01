@@ -13,7 +13,7 @@ $stmt->fetch();
 $result = $stmt->get_result();
 foreach ((array) $result as $row) {
     //iterates through every state
-    $state_name = $row['name'];
+    $state_name = $row['statename'];
     $state_population = $row['population'];
     $gov_time_remaining = $row['govtime'];
     $wmc_voter_share = $row['wmcvotershare'];
