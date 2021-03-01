@@ -72,7 +72,7 @@ foreach ((array) $result as $row) {
         $appeal_share = $candidate_appeal_to_demographic / $wmc_total_appeal;
         return $appeal_share * $votes_added;
     }
-    $array_of_race = arr(1, 2, 3); //gov, junior senate, senior senate respectively
+    $array_of_race = array(1, 2, 3); //gov, junior senate, senior senate respectively
     foreach ($array_of_race as $race_param) {
         $candidates_in_race = findCandidatesByRace($con, $state_name, $race_param);
         foreach ($candidates_in_race as $candidate_result) {
