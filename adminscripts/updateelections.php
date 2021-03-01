@@ -11,6 +11,7 @@ $stmt = $con->prepare($state_data_query);
 $stmt->execute();
 $stmt->fetch();
 $result = $stmt->get_result();
+print "<p> " . $result . "</p>";
 while ($row = $result->fetch_assoc()) {
     //iterates through every state
     $state_name = $row['statename'];
