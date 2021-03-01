@@ -45,7 +45,7 @@ body {
     opacity: 1.0;
     height: auto;
     width: 70% !important;
-
+    border: 1px solid grey;
     justify-items: center;
 }
 #parties-main-container {
