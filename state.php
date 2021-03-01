@@ -1,7 +1,7 @@
 
 
 <?php
-include 'common_functions/navigation.php';
+include 'navigation.php';
 include 'common_functions/formatting_functions.php';
 
 error_reporting(E_ALL);

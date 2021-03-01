@@ -56,6 +56,9 @@ body {
 }
 #profile-main-container {
     grid-template-columns: 70%;
+    justify-content: center;
+    margin: auto;
+
 }
 .profile-image {
     height: 20%;
