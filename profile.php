@@ -4,7 +4,7 @@ ini_set('display_errors', 'on');
 //
 include 'common_functions/navigation.php';
 include 'common_functions/formatting_functions.php';
-include 'common_functions/scrape_profile_data.php';
+include 'common_functions/query_profile_data.php';
 
 // fetch profile ID from link
 $profile_id = urlencode( $_GET['id']);
