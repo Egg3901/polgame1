@@ -37,12 +37,15 @@ body {
 
 }
 .main-container {
+    margin-top: 2em;
+    margin-left: .5em;
+    margin-right: .5em;
     display: grid;
     background: floralwhite;
     opacity: 1.0;
     height: auto;
     width: 70% !important;
-    margin: auto;
+
     justify-items: center;
 }
 #parties-main-container {
