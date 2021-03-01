@@ -13,6 +13,7 @@ body {
     align-content: space-evenly;
     justify-items: center;
     padding: .5em;
+    position: fixed;
 
 }
 #navbar-header {
