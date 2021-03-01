@@ -4,7 +4,7 @@ include 'connect.php';
 error_reporting(E_ALL);
 ini_set('display_errors', 'on');
 $con = OpenCon();
-$state_data_query = 'FROM states SELECT name, population, govtime, wmcvotershare, wmctotalappeal, wmcecon, wmcsocial';
+$state_data_query = 'FROM states SELECT name, population, govtime, wmcvotershare, wmctotalappeal, wmcecon, wmcsocial WHERE id = *';
 $stmt = $con->prepare($state_data_query);
 $stmt->execute();
 $stmt->fetch();
