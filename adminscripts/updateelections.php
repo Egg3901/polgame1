@@ -5,6 +5,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 'on');
 
 $con = OpenCon();
+
 $state_data_query = 'SELECT statename, population, govtime, wmcvotershare, wmctotalappeal, wmcecon, wmcsocial FROM states';
 $stmt = $con->prepare($state_data_query);
 
@@ -60,7 +61,7 @@ foreach ($result as $state_result) {
         $candidate_appeal_to_demographic  = (
                 100 - ($candidate_social_distance * 5) - ($candidate_econ_distance * 5))^2/200 * ($candidate_influence / 100
             );
-        $wmc_total_appeal + $candidate_appeal_to_demographic;
+
         return $candidate_appeal_to_demographic;
     }
 
@@ -83,6 +84,7 @@ foreach ($result as $state_result) {
         }
         foreach ($candidates_in_race as $candidate_result) {
             $candidates_votes = calculateVotesPerCandidate($wmc_total_appeal, $voter_base, $candidate_appeal_to_demographic);
+            $wmc_total_appeal = $wmc_total_appeal + $candidate_appeal_to_demographic;
             $candidate_id = $candidate_result['id'];
             $votes_added = 'UPDATE accounts SET votes = ? WHERE id = ?';
             $election_update = $con ->prepare($votes_added);
