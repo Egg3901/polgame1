@@ -5,23 +5,23 @@ error_reporting(E_ALL);
 ini_set('display_errors', 'on');
 
 $con = OpenCon();
-$state_data_query = 'SELECT population FROM states';
+$state_data_query = 'SELECT statename, population, govtime, wmcvotershare, wmctotalappeal, wmcecon, wmcsocial FROM states';
 $stmt = $con->prepare($state_data_query);
 
 $stmt->execute();
 $stmt->fetch();
 $result = $stmt->get_result();
 print "<p> " . $result . "</p>";
-while ($row = $result->fetch_assoc()) {
+foreach ($result as $state_result) {
     //iterates through every state
-    $state_name = $row['statename'];
-    $state_population = $row['population'];
+    $state_name = $state_result['statename'];
+    $state_population = $state_result['population'];
     print "<p> " . $state_population . "</p>";
-    $gov_time_remaining = $row['govtime'];
-    $wmc_voter_share = $row['wmcvotershare'];
-    $wmc_total_appeal = $row['wmctotalappeal'];
-    $wmc_econ = $row['wmcecon'];
-    $wmc_social = $row['wmcsocial'];
+    $gov_time_remaining = $state_result['govtime'];
+    $wmc_voter_share = $state_result['wmcvotershare'];
+    $wmc_total_appeal = $state_result['wmctotalappeal'];
+    $wmc_econ = $state_result['wmcecon'];
+    $wmc_social = $state_result['wmcsocial'];
     $voter_turnout = .61;
     $voter_base = round(($state_population * $voter_turnout));
     $votes_added_per_update = round(($voter_base / $gov_time_remaining));
